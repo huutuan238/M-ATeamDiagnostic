@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_dashboard" name="shell-type" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0f172a",
+              secondary: "#0284c7",
+              "accent-emerald": "#059669",
+              error: "#dc2626",
+              "error-light": "#fef2f2",
+              warning: "#d97706",
+              "warning-light": "#fffbeb",
+              "slate-text": "#0f172a",
+              "slate-muted": "#64748b",
+              "slate-subtle": "#94a3b8",
+              "surface-card": "#ffffff",
+              "surface-bg": "#f8fafc",
+            },
+            fontFamily: {
+              display: ["Plus Jakarta Sans", "sans-serif"],
+              body: ["Inter", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-surface-bg font-body text-slate-text antialiased selection:bg-slate-900 selection:text-white"
+  >
+    <header
+      class="fixed top-0 left-0 right-0 z-50 h-16 bg-white border-b border-slate-200/80 flex items-center justify-between px-8 shadow-[0_1px_3px_rgba(0,0,0,0.03)]"
+    >
+      <div class="flex items-center gap-6">
+        <div class="flex items-center gap-3">
+          <img
+            alt="SynergyIQ Logo"
+            class="h-8 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRQuIzUP-0KFw1MSqvj-G3R1rLPWsyxIhbw5H4vGVZNIqvZd1TMqLaRg7kwuxWuSqEAbLqqN2yCA0RlcN45h1FQ6ie-LgJEJrkQ2IWSNkEp2AuD3_vSYz84Ybp07ipAszzGv6xcW6JJKNx6uRolkOZ9vOnkb6npE2iM6WFxlPMMA34l4Yn-Ed676if_CEHj16CFDRnE55d-vkiCzvHhyAxFg9nAuT-rE1ZlY0kpqKRMJ1nkFfX8Via"
+          />
+          <div class="flex flex-col">
+            <span
+              class="font-display font-bold text-base text-slate-900 tracking-tight leading-none"
+              >SynergyIQ</span
+            ><span
+              class="font-mono text-[9px] text-secondary font-semibold tracking-wider uppercase mt-0.5"
+              >M&amp;A Intelligence</span
+            >
+          </div>
+        </div>
+        <div class="h-5 w-px bg-slate-200"></div>
+        <div
+          class="flex items-center gap-2.5 bg-slate-50 border border-slate-200 px-3.5 py-1.5 rounded-lg"
+        >
+          <span class="material-symbols-outlined text-slate-500 text-base"
+            >corporate_fare</span
+          >
+          <div class="flex flex-col">
+            <span
+              class="font-mono text-[9px] text-slate-400 font-semibold uppercase"
+              >Target Deal</span
+            ><span
+              class="text-xs text-slate-800 font-semibold truncate max-w-[200px]"
+              >Masan Consumer + VinCommerce</span
+            >
+          </div>
+          <span class="material-symbols-outlined text-slate-400 text-base"
+            >arrow_drop_down</span
+          >
+        </div>
+        <div
+          class="hidden xl:flex items-center gap-2 bg-emerald-50/80 border border-emerald-200/60 px-3 py-1.5 rounded-lg"
+        >
+          <span class="relative flex h-2 w-2"
+            ><span
+              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"
+            ></span
+            ><span
+              class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"
+            ></span></span
+          ><span
+            class="font-mono text-[11px] text-emerald-800 font-semibold tracking-wide"
+            >Giai đoạn: 90 Ngày Đầu</span
+          >
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <button
+          class="relative p-2 text-slate-500 hover:text-slate-800 transition-colors rounded-lg hover:bg-slate-100"
+          type="button"
+        >
+          <span class="material-symbols-outlined text-xl">notifications</span
+          ><span
+            class="absolute top-1 right-1 flex h-4 w-4 items-center justify-center rounded-full bg-rose-500 text-white font-mono text-[9px] font-bold"
+            >3</span
+          >
+        </button>
+        <div class="h-5 w-px bg-slate-200"></div>
+        <div class="flex items-center gap-3 pl-1">
+          <div class="flex flex-col text-right hidden sm:flex">
+            <span class="text-xs text-slate-900 font-semibold leading-tight"
+              >Trần Nam Quân</span
+            ><span class="font-mono text-[10px] text-slate-500 uppercase"
+              >IMO Lead</span
+            >
+          </div>
+          <img
+            alt="Profile"
+            class="w-8 h-8 rounded-full object-cover ring-2 ring-slate-100"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuApKzrf3TtIfhMjzSaAC_DM_jujXOl18pprTYaJkK4ev37mT1q-ypokHwR4xWmsNevTxBvq4AiY18kUq095t3Gv5RYvtlCPgerkxF6ibP5vEQWitTKXgIjr8ZUFXKXzN0atZcZcxwxZcu3bCP-g9Y8REaWsUG_Cr5bEUB5tWCu4BgEwOBLjnsxE_f5CKq8MPbx2jIMWkug6HvbuUqj33GFn0FVDojUehL5ik0A44w9TVgKRK9bg50i1"
+          />
+        </div>
+      </div>
+    </header>
+    <aside
+      class="fixed left-0 top-16 bottom-0 w-64 bg-white border-r border-slate-200 z-40 flex flex-col justify-between py-5"
+    >
+      <div class="flex flex-col gap-1 px-4">
+        <div class="px-3 py-1 mb-2 flex items-center justify-between">
+          <span
+            class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider"
+            >Quy trình</span
+          ><span
+            class="text-xs font-semibold text-sky-600 bg-sky-50 px-2 py-0.5 rounded"
+            >05 Giai đoạn</span
+          >
+        </div>
+        <nav class="flex flex-col gap-1">
+          <a
+            class="flex items-center gap-3 px-3 py-2 rounded-lg bg-slate-900 text-white font-medium shadow-sm transition-all text-xs"
+            href="deal_selector.html"
+            ><span class="material-symbols-outlined text-base">dataset</span
+            ><span>1. Ngân Hàng Deal</span></a
+          ><a
+            class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all text-xs font-medium"
+            href="friction_index.html"
+            ><span class="material-symbols-outlined text-base text-slate-400"
+              >compare_arrows</span
+            ><span>2. Chấm Điểm Lệch</span></a
+          ><a
+            class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all text-xs font-medium"
+            href="imo_diagnostic.html"
+            ><span class="material-symbols-outlined text-base text-slate-400"
+              >analytics</span
+            ><span>3. Tuckman &amp; Rủi Ro</span></a
+          ><a
+            class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all text-xs font-medium"
+            href="intervention_simulator.html"
+            ><span class="material-symbols-outlined text-base text-slate-400"
+              >tune</span
+            ><span>4. Giả Lập Can Thiệp</span></a
+          ><a
+            class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all text-xs font-medium"
+            href="synergy_dashboard.html"
+            ><span class="material-symbols-outlined text-base text-slate-400"
+              >insights</span
+            ><span>5. Báo Cáo Synergy</span></a
+          >
+        </nav>
+      </div>
+      <div class="px-4">
+        <div
+          class="bg-slate-50 border border-slate-200 p-3.5 rounded-xl flex flex-col gap-2"
+        >
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-medium text-slate-500"
+              >Synergy Run-Rate</span
+            ><span class="text-xs font-bold text-slate-900">78.4%</span>
+          </div>
+          <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
+            <div class="bg-emerald-500 h-full rounded-full w-[78%]"></div>
+          </div>
+          <div
+            class="flex justify-between items-center text-slate-500 text-[11px]"
+          >
+            <span>Mục tiêu: $42M</span
+            ><span class="font-medium text-slate-700">$33M</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <div class="pl-64">
+      <main class="w-full pt-16 bg-surface-bg min-h-screen">
+        <div class="flex flex-col w-full">
+          <!-- Top Command Banner / Hero Metric Matrix -->
+          <section
+            class="relative px-8 py-7 bg-white border-b border-slate-200/80"
+          >
+            <div class="relative z-10 flex flex-col gap-5 max-w-7xl">
+              <!-- Breadcrumb and Deal Meta -->
+              <div class="flex flex-wrap items-center justify-between gap-3">
+                <div
+                  class="flex items-center gap-2 text-slate-500 font-mono text-xs"
+                >
+                  <span>DEAL: MASAN GROUP</span>
+                  <span class="material-symbols-outlined text-xs text-slate-400"
+                    >arrow_forward</span
+                  >
+                  <span>VINCOMMERCE (WCM)</span>
+                  <span class="material-symbols-outlined text-xs text-slate-400"
+                    >arrow_forward</span
+                  >
+                  <span class="text-slate-900 font-semibold"
+                    >MISMATCH INDEX</span
+                  >
+                </div>
+                <div
+                  class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-rose-50 border border-rose-200 text-rose-700 font-mono text-[11px] font-medium"
+                >
+                  <span
+                    class="w-1.5 h-1.5 rounded-full bg-rose-600 animate-pulse"
+                  ></span>
+                  <span>POST-MERGER DAY +45</span>
+                </div>
+              </div>
+              <!-- Main Headline + Executive CTAs -->
+              <div
+                class="flex flex-col xl:flex-row xl:items-end justify-between gap-6"
+              >
+                <div class="flex flex-col gap-1 max-w-3xl">
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="px-2 py-0.5 rounded bg-rose-100 text-rose-800 font-mono text-[10px] font-bold tracking-wide uppercase"
+                      >Cấp Độ Báo Động IV</span
+                    >
+                    <span class="text-slate-400 font-mono text-xs"
+                      >• Đo lường ma sát sau sáp nhập</span
+                    >
+                  </div>
+                  <h1
+                    class="font-display text-2xl md:text-3xl font-bold text-slate-900 tracking-tight"
+                  >
+                    Ma Trận &amp; Chỉ Số Ma Sát Tích Hợp (Mismatch Index)
+                  </h1>
+                  <p class="text-sm text-slate-600 leading-relaxed">
+                    Đo lường định lượng xung đột cấu trúc, quy trình và độ vênh
+                    văn hóa giữa Masan và VinCommerce trong 90 ngày đầu.
+                  </p>
+                </div>
+                <!-- Top Level Actions -->
+                <div class="flex items-center gap-3">
+                  <button
+                    class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 font-medium text-xs transition-colors shadow-sm"
+                    onclick="alert('Đang biên soạn hồ sơ Mismatch Briefing định dạng PDF...')"
+                    type="button"
+                  >
+                    <span
+                      class="material-symbols-outlined text-base text-slate-500"
+                      >picture_as_pdf</span
+                    >
+                    <span>Xuất Báo Cáo</span>
+                  </button>
+                  <a
+                    class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold transition-colors shadow-sm"
+                    data-path="chan-doan-tuckman-va-rui-ro-imo"
+                    href="#"
+                  >
+                    <span>Chẩn Đoán Tuckman</span>
+                    <span class="material-symbols-outlined text-base"
+                      >arrow_forward</span
+                    >
+                  </a>
+                </div>
+              </div>
+              <!-- High-Impact Severity Bar -->
+              <div
+                class="grid grid-cols-1 md:grid-cols-12 gap-5 bg-slate-50/80 border border-slate-200/80 p-5 rounded-xl"
+              >
+                <div
+                  class="md:col-span-4 flex flex-col justify-between pr-4 md:border-r md:border-slate-200"
+                >
+                  <div class="flex flex-col">
+                    <span
+                      class="font-mono text-[11px] text-slate-500 font-bold uppercase tracking-wider"
+                      >Tổng Điểm Lệch Toàn Diện</span
+                    >
+                    <div class="flex items-baseline gap-2 mt-1">
+                      <span class="font-mono text-4xl text-rose-600 font-bold"
+                        >76</span
+                      >
+                      <span class="font-mono text-xs text-slate-400 font-medium"
+                        >/ 100</span
+                      >
+                      <span
+                        class="ml-2 px-2 py-0.5 rounded bg-rose-100 text-rose-700 font-mono text-[10px] font-bold"
+                        >NGUY CƠ CAO</span
+                      >
+                    </div>
+                  </div>
+                  <p class="text-xs text-rose-700 mt-2 font-medium">
+                    Rủi ro xói mòn 34% giá trị Synergy năm đầu nếu không can
+                    thiệp trong 30 ngày.
+                  </p>
+                </div>
+                <div
+                  class="md:col-span-8 flex flex-col justify-center gap-3 pl-0 md:pl-2"
+                >
+                  <div
+                    class="flex justify-between items-center text-slate-500 font-mono text-xs"
+                  >
+                    <span>Mức an toàn: &lt; 40</span>
+                    <span class="text-rose-600 font-bold"
+                      >Vượt ngưỡng an toàn: +36 điểm</span
+                    >
+                  </div>
+                  <!-- Multi-tier Bar Gauge -->
+                  <div
+                    class="relative w-full h-2.5 rounded-full bg-slate-200 overflow-hidden"
+                  >
+                    <div
+                      class="absolute left-0 top-0 bottom-0 bg-emerald-500 rounded-l-full"
+                      style="width: 35%"
+                    ></div>
+                    <div
+                      class="absolute left-[35%] top-0 bottom-0 bg-amber-400"
+                      style="width: 25%"
+                    ></div>
+                    <div
+                      class="absolute left-[60%] top-0 bottom-0 bg-rose-500"
+                      style="width: 16%"
+                    ></div>
+                  </div>
+                  <div
+                    class="flex items-center justify-between font-mono text-[11px] pt-1"
+                  >
+                    <div class="flex items-center gap-1.5 text-emerald-700">
+                      <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                      <span>An toàn (&lt;35)</span>
+                    </div>
+                    <div class="flex items-center gap-1.5 text-amber-600">
+                      <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                      <span>Rủi ro vận hành (35 - 60)</span>
+                    </div>
+                    <div
+                      class="flex items-center gap-1.5 text-rose-600 font-bold"
+                    >
+                      <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+                      <span>Khủng hoảng (&gt;60) [76]</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Section 2: 4 Simplified Friction Pillars -->
+          <section class="px-8 py-7 flex flex-col gap-4 max-w-7xl">
+            <div class="flex items-center justify-between">
+              <div>
+                <span
+                  class="font-mono text-[10px] text-secondary font-bold uppercase tracking-wider"
+                  >Phân Rã Trọng Yếu</span
+                >
+                <h2 class="font-display text-lg font-bold text-slate-900">
+                  4 Trụ Cột Ma Sát Tích Hợp
+                </h2>
+              </div>
+              <span class="font-mono text-xs text-slate-400"
+                >ĐÁNH GIÁ ĐỊNH KỲ IMO</span
+              >
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+              <!-- Pillar 1 -->
+              <div
+                class="flex flex-col justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-sm hover:border-slate-300 transition-all"
+              >
+                <div class="flex flex-col gap-3">
+                  <div class="flex items-center justify-between">
+                    <span
+                      class="p-2 rounded-lg bg-rose-50 text-rose-600 material-symbols-outlined text-xl"
+                      >account_tree</span
+                    >
+                    <span class="font-mono text-base font-bold text-rose-600"
+                      >82<span class="text-xs text-slate-400 font-normal"
+                        >/100</span
+                      ></span
+                    >
+                  </div>
+                  <div>
+                    <span
+                      class="font-mono text-[10px] text-slate-400 uppercase font-semibold"
+                      >Trụ Cột 01</span
+                    >
+                    <h3
+                      class="font-display text-sm font-bold text-slate-900 mt-0.5"
+                    >
+                      Chồng Chéo Cấu Trúc
+                    </h3>
+                  </div>
+                  <ul class="text-xs text-slate-600 space-y-1.5 pt-1">
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-rose-500 font-bold">•</span>
+                      <span
+                        ><strong>Trùng 68%</strong> Giám đốc Ngành &amp; VP
+                        Chuỗi cung ứng</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-rose-500 font-bold">•</span>
+                      <span
+                        >Lệch ma trận RACI duyệt chiết khấu &amp; NCC lớn</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="mt-4 pt-2.5 border-t border-slate-100 flex items-center justify-between font-mono text-[11px]"
+                >
+                  <span
+                    class="px-1.5 py-0.5 bg-rose-50 text-rose-700 rounded font-semibold text-[10px]"
+                    >Tác động: RẤT CAO</span
+                  >
+                  <span class="text-rose-600 font-bold">82%</span>
+                </div>
+              </div>
+              <!-- Pillar 2 -->
+              <div
+                class="flex flex-col justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-sm hover:border-slate-300 transition-all"
+              >
+                <div class="flex flex-col gap-3">
+                  <div class="flex items-center justify-between">
+                    <span
+                      class="p-2 rounded-lg bg-amber-50 text-amber-600 material-symbols-outlined text-xl"
+                      >lan</span
+                    >
+                    <span class="font-mono text-base font-bold text-amber-600"
+                      >74<span class="text-xs text-slate-400 font-normal"
+                        >/100</span
+                      ></span
+                    >
+                  </div>
+                  <div>
+                    <span
+                      class="font-mono text-[10px] text-slate-400 uppercase font-semibold"
+                      >Trụ Cột 02</span
+                    >
+                    <h3
+                      class="font-display text-sm font-bold text-slate-900 mt-0.5"
+                    >
+                      Lệch Quy Trình &amp; IT
+                    </h3>
+                  </div>
+                  <ul class="text-xs text-slate-600 space-y-1.5 pt-1">
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-amber-500 font-bold">•</span>
+                      <span
+                        >Xung đột <strong>SAP ERP (Masan)</strong> vs
+                        <strong>Legacy retail (WCM)</strong></span
+                      >
+                    </li>
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-amber-500 font-bold">•</span>
+                      <span>Lệch chu kỳ kế hoạch: theo tháng vs theo ngày</span>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="mt-4 pt-2.5 border-t border-slate-100 flex items-center justify-between font-mono text-[11px]"
+                >
+                  <span
+                    class="px-1.5 py-0.5 bg-amber-50 text-amber-700 rounded font-semibold text-[10px]"
+                    >Đồng bộ: 120 NGÀY</span
+                  >
+                  <span class="text-amber-600 font-bold">74%</span>
+                </div>
+              </div>
+              <!-- Pillar 3 -->
+              <div
+                class="flex flex-col justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-sm hover:border-slate-300 transition-all"
+              >
+                <div class="flex flex-col gap-3">
+                  <div class="flex items-center justify-between">
+                    <span
+                      class="p-2 rounded-lg bg-rose-50 text-rose-600 material-symbols-outlined text-xl"
+                      >psychology</span
+                    >
+                    <span class="font-mono text-base font-bold text-rose-600"
+                      >79<span class="text-xs text-slate-400 font-normal"
+                        >/100</span
+                      ></span
+                    >
+                  </div>
+                  <div>
+                    <span
+                      class="font-mono text-[10px] text-slate-400 uppercase font-semibold"
+                      >Trụ Cột 03</span
+                    >
+                    <h3
+                      class="font-display text-sm font-bold text-slate-900 mt-0.5"
+                    >
+                      Khoảng Cách Văn Hóa
+                    </h3>
+                  </div>
+                  <ul class="text-xs text-slate-600 space-y-1.5 pt-1">
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-rose-500 font-bold">•</span>
+                      <span
+                        >Masan: Kỷ luật số liệu, EBITDA &amp; tối ưu biên
+                        lãi</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-rose-500 font-bold">•</span>
+                      <span>WCM cũ: Tốc độ mở điểm, độ phủ thị trường</span>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="mt-4 pt-2.5 border-t border-slate-100 flex items-center justify-between font-mono text-[11px]"
+                >
+                  <span
+                    class="px-1.5 py-0.5 bg-rose-50 text-rose-700 rounded font-semibold text-[10px]"
+                    >Gắn kết: -28%</span
+                  >
+                  <span class="text-rose-600 font-bold">79%</span>
+                </div>
+              </div>
+              <!-- Pillar 4 -->
+              <div
+                class="flex flex-col justify-between bg-white border border-slate-200 rounded-xl p-4 shadow-sm hover:border-slate-300 transition-all"
+              >
+                <div class="flex flex-col gap-3">
+                  <div class="flex items-center justify-between">
+                    <span
+                      class="p-2 rounded-lg bg-amber-50 text-amber-600 material-symbols-outlined text-xl"
+                      >hourglass_top</span
+                    >
+                    <span class="font-mono text-base font-bold text-amber-600"
+                      >69<span class="text-xs text-slate-400 font-normal"
+                        >/100</span
+                      ></span
+                    >
+                  </div>
+                  <div>
+                    <span
+                      class="font-mono text-[10px] text-slate-400 uppercase font-semibold"
+                      >Trụ Cột 04</span
+                    >
+                    <h3
+                      class="font-display text-sm font-bold text-slate-900 mt-0.5"
+                    >
+                      Lệch Mục Tiêu Thời Gian
+                    </h3>
+                  </div>
+                  <ul class="text-xs text-slate-600 space-y-1.5 pt-1">
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-amber-500 font-bold">•</span>
+                      <span
+                        >Áp lực cắt giảm thâm hụt tài chính trong 18 tháng</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-amber-500 font-bold">•</span>
+                      <span
+                        >Capex chuỗi lạnh dài hạn phục vụ hàng tươi sống</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="mt-4 pt-2.5 border-t border-slate-100 flex items-center justify-between font-mono text-[11px]"
+                >
+                  <span
+                    class="px-1.5 py-0.5 bg-amber-50 text-amber-700 rounded font-semibold text-[10px]"
+                    >Hòa vốn: 18 THÁNG</span
+                  >
+                  <span class="text-amber-600 font-bold">69%</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Section 3 & 4: Interactive Radar Visualization & Priority Hotspots -->
+          <section
+            class="px-8 pb-8 grid grid-cols-1 lg:grid-cols-12 gap-5 max-w-7xl"
+          >
+            <!-- Left: Radar Chart Component -->
+            <div
+              class="lg:col-span-5 bg-white border border-slate-200 rounded-xl p-5 flex flex-col justify-between shadow-sm"
+            >
+              <div class="flex flex-col gap-1">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="font-mono text-[10px] text-secondary font-bold uppercase"
+                    >Mô Hình 8 Chiều</span
+                  >
+                  <button
+                    class="px-2 py-0.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-mono text-[10px] font-medium transition-colors"
+                    id="toggle-overlay"
+                    onclick="toggleDataset()"
+                  >
+                    Ẩn/Hiện Vùng Lệch
+                  </button>
+                </div>
+                <h3 class="font-display text-base font-bold text-slate-900">
+                  Tương Quan Masan vs VinCommerce
+                </h3>
+                <p class="text-xs text-slate-500">
+                  Độ lệch chuẩn trên 8 trục vận hành cốt lõi (1-100).
+                </p>
+              </div>
+              <!-- Radar Visualization Light Theme -->
+              <div
+                class="relative w-full aspect-square max-w-[360px] mx-auto my-3 flex items-center justify-center"
+              >
+                <svg
+                  class="w-full h-full overflow-visible"
+                  viewbox="0 0 400 400"
+                >
+                  <!-- Polar Grid Rings -->
+                  <circle
+                    cx="200"
+                    cy="200"
+                    fill="#f8fafc"
+                    r="160"
+                    stroke="#e2e8f0"
+                    stroke-dasharray="3,3"
+                    stroke-width="1"
+                  ></circle>
+                  <circle
+                    cx="200"
+                    cy="200"
+                    fill="none"
+                    r="120"
+                    stroke="#e2e8f0"
+                    stroke-width="1"
+                  ></circle>
+                  <circle
+                    cx="200"
+                    cy="200"
+                    fill="none"
+                    r="80"
+                    stroke="#e2e8f0"
+                    stroke-width="1"
+                  ></circle>
+                  <circle
+                    cx="200"
+                    cy="200"
+                    fill="none"
+                    r="40"
+                    stroke="#e2e8f0"
+                    stroke-width="1"
+                  ></circle>
+                  <!-- 8 Axes -->
+                  <line
+                    stroke="#cbd5e1"
+                    stroke-width="1"
+                    x1="200"
+                    x2="200"
+                    y1="200"
+                    y2="40"
+                  ></line>
+                  <line
+                    stroke="#cbd5e1"
+                    stroke-width="1"
+                    x1="200"
+                    x2="313"
+                    y1="200"
+                    y2="87"
+                  ></line>
+                  <line
+                    stroke="#cbd5e1"
+                    stroke-width="1"
+                    x1="200"
+                    x2="360"
+                    y1="200"
+                    y2="200"
+                  ></line>
+                  <line
+                    stroke="#cbd5e1"
+                    stroke-width="1"
+                    x1="200"
+                    x2="313"
+                    y1="200"
+                    y2="313"
+                  ></line>
+                  <line
+                    stroke="#cbd5e1"
+                    stroke-width="1"
+                    x1="200"
+                    x2="200"
+                    y1="200"
+                    y2="360"
+                  ></line>
+                  <line
+                    stroke="#cbd5e1"
+                    stroke-width="1"
+                    x1="200"
+                    x2="87"
+                    y1="200"
+                    y2="313"
+                  ></line>
+                  <line
+                    stroke="#cbd5e1"
+                    stroke-width="1"
+                    x1="200"
+                    x2="40"
+                    y1="200"
+                    y2="200"
+                  ></line>
+                  <line
+                    stroke="#cbd5e1"
+                    stroke-width="1"
+                    x1="200"
+                    x2="87"
+                    y1="200"
+                    y2="87"
+                  ></line>
+                  <!-- Axis Labels -->
+                  <text
+                    class="fill-slate-600 font-mono text-[9px] font-semibold"
+                    text-anchor="middle"
+                    x="200"
+                    y="26"
+                  >
+                    1. Ra Quyết Định
+                  </text>
+                  <text
+                    class="fill-slate-600 font-mono text-[9px] font-semibold"
+                    text-anchor="start"
+                    x="325"
+                    y="80"
+                  >
+                    2. Quản Trị Rủi Ro
+                  </text>
+                  <text
+                    class="fill-slate-600 font-mono text-[9px] font-semibold"
+                    text-anchor="start"
+                    x="368"
+                    y="204"
+                  >
+                    3. Kế Hoạch
+                  </text>
+                  <text
+                    class="fill-slate-600 font-mono text-[9px] font-semibold"
+                    text-anchor="start"
+                    x="325"
+                    y="325"
+                  >
+                    4. IT &amp; Data
+                  </text>
+                  <text
+                    class="fill-slate-600 font-mono text-[9px] font-semibold"
+                    text-anchor="middle"
+                    x="200"
+                    y="380"
+                  >
+                    5. Tối Ưu Chi Phí
+                  </text>
+                  <text
+                    class="fill-slate-600 font-mono text-[9px] font-semibold"
+                    text-anchor="end"
+                    x="75"
+                    y="325"
+                  >
+                    6. Tốc Độ Mở Điểm
+                  </text>
+                  <text
+                    class="fill-slate-600 font-mono text-[9px] font-semibold"
+                    text-anchor="end"
+                    x="32"
+                    y="204"
+                  >
+                    7. Thẩm Quyền NCC
+                  </text>
+                  <text
+                    class="fill-slate-600 font-mono text-[9px] font-semibold"
+                    text-anchor="end"
+                    x="75"
+                    y="80"
+                  >
+                    8. Văn Hóa Thưởng
+                  </text>
+                  <!-- Masan Polygon (Blue) -->
+                  <polygon
+                    fill="#0284c7"
+                    fill-opacity="0.25"
+                    id="poly-masan"
+                    points="200,59 302,98 344,200 285,285 200,347 125,275 62,200 103,103"
+                    stroke="#0284c7"
+                    stroke-width="2"
+                  ></polygon>
+                  <!-- VinCommerce Polygon (Rose) -->
+                  <polygon
+                    fill="#f43f5e"
+                    fill-opacity="0.2"
+                    id="poly-wcm"
+                    points="200,128 256,144 264,200 251,251 200,277 56,344 133,200 132,132"
+                    stroke="#e11d48"
+                    stroke-width="2"
+                  ></polygon>
+                  <!-- Gap / Mismatch Polygon -->
+                  <polygon
+                    fill="none"
+                    id="poly-gap"
+                    opacity="0.9"
+                    points="200,59 302,98 344,200 285,285 200,347 56,344 62,200 103,103"
+                    stroke="#e11d48"
+                    stroke-dasharray="4,3"
+                    stroke-width="1.5"
+                  ></polygon>
+                </svg>
+              </div>
+              <!-- Legend -->
+              <div
+                class="flex items-center justify-around p-2.5 rounded-lg bg-slate-50 border border-slate-200/80 font-mono text-[11px]"
+              >
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded bg-sky-500"></span>
+                  <span class="text-slate-700 font-medium">Masan Group</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded bg-rose-400"></span>
+                  <span class="text-slate-700 font-medium">VinCommerce</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-0.5 bg-rose-600"></span>
+                  <span class="text-rose-600 font-semibold">Vùng Ma Sát</span>
+                </div>
+              </div>
+            </div>
+            <!-- Right: Streamlined Priority Hotspots Table -->
+            <div
+              class="lg:col-span-7 bg-white border border-slate-200 rounded-xl p-5 flex flex-col justify-between shadow-sm"
+            >
+              <div class="flex flex-col gap-1">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="font-mono text-[10px] text-rose-600 font-bold uppercase"
+                    >Điểm Nóng Cấp Bách</span
+                  >
+                  <span class="font-mono text-xs text-slate-400"
+                    >THEO TÁC ĐỘNG TÀI CHÍNH</span
+                  >
+                </div>
+                <h3 class="font-display text-base font-bold text-slate-900">
+                  Bảng Phân Bổ Rủi Ro Tài Chính &amp; P&amp;L
+                </h3>
+                <p class="text-xs text-slate-500">
+                  5 điểm tắc nghẽn ảnh hưởng trực tiếp tới EBITDA và vận hành.
+                </p>
+              </div>
+              <!-- Streamlined Table -->
+              <div class="overflow-x-auto my-3">
+                <table class="w-full text-left text-xs">
+                  <thead>
+                    <tr
+                      class="bg-slate-50 border-y border-slate-200 text-slate-500 font-mono text-[11px] uppercase"
+                    >
+                      <th class="py-2.5 px-3 font-semibold">Điểm Nóng</th>
+                      <th class="py-2.5 px-3 font-semibold text-right">
+                        Ảnh Hưởng P&amp;L
+                      </th>
+                      <th class="py-2.5 px-3 font-semibold text-center">
+                        Mức Rủi Ro
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-100">
+                    <!-- Row 1 -->
+                    <tr class="hover:bg-slate-50/70 transition-colors">
+                      <td class="py-3 px-3">
+                        <div class="flex flex-col">
+                          <span class="font-semibold text-slate-900 text-xs"
+                            >Đàm Phán Nhà Cung Cấp &amp; Rebate</span
+                          >
+                          <span class="text-slate-500 font-mono text-[10px]"
+                            >Supply Chain &amp; Commercial</span
+                          >
+                        </div>
+                      </td>
+                      <td
+                        class="py-3 px-3 text-right font-mono text-sm text-rose-600 font-bold whitespace-nowrap"
+                      >
+                        -$14.5M
+                      </td>
+                      <td class="py-3 px-3 text-center">
+                        <span
+                          class="inline-flex px-2 py-0.5 rounded-full bg-rose-50 text-rose-700 font-mono text-[10px] font-bold"
+                        >
+                          CỰC NGHIÊM TRỌNG
+                        </span>
+                      </td>
+                    </tr>
+                    <!-- Row 2 -->
+                    <tr class="hover:bg-slate-50/70 transition-colors">
+                      <td class="py-3 px-3">
+                        <div class="flex flex-col">
+                          <span class="font-semibold text-slate-900 text-xs"
+                            >Đóng Mặt Bằng Kém Hiệu Quả</span
+                          >
+                          <span class="text-slate-500 font-mono text-[10px]"
+                            >150 điểm bán lỗ &gt;6 tháng</span
+                          >
+                        </div>
+                      </td>
+                      <td
+                        class="py-3 px-3 text-right font-mono text-sm text-rose-600 font-bold whitespace-nowrap"
+                      >
+                        -$8.2M
+                      </td>
+                      <td class="py-3 px-3 text-center">
+                        <span
+                          class="inline-flex px-2 py-0.5 rounded-full bg-rose-50 text-rose-700 font-mono text-[10px] font-bold"
+                        >
+                          CỰC NGHIÊM TRỌNG
+                        </span>
+                      </td>
+                    </tr>
+                    <!-- Row 3 -->
+                    <tr class="hover:bg-slate-50/70 transition-colors">
+                      <td class="py-3 px-3">
+                        <div class="flex flex-col">
+                          <span class="font-semibold text-slate-900 text-xs"
+                            >Tích Hợp Dữ Liệu Tồn Kho POS</span
+                          >
+                          <span class="text-slate-500 font-mono text-[10px]"
+                            >Lệch chuẩn mã SKU tiêu dùng</span
+                          >
+                        </div>
+                      </td>
+                      <td
+                        class="py-3 px-3 text-right font-mono text-sm text-amber-600 font-bold whitespace-nowrap"
+                      >
+                        -$4.8M
+                      </td>
+                      <td class="py-3 px-3 text-center">
+                        <span
+                          class="inline-flex px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 font-mono text-[10px] font-bold"
+                        >
+                          TRUNG BÌNH
+                        </span>
+                      </td>
+                    </tr>
+                    <!-- Row 4 -->
+                    <tr class="hover:bg-slate-50/70 transition-colors">
+                      <td class="py-3 px-3">
+                        <div class="flex flex-col">
+                          <span class="font-semibold text-slate-900 text-xs"
+                            >Chảy Máu Nhân Sự Cấp Trung</span
+                          >
+                          <span class="text-slate-500 font-mono text-[10px]"
+                            >31% Cửa hàng trưởng nộp đơn</span
+                          >
+                        </div>
+                      </td>
+                      <td
+                        class="py-3 px-3 text-right font-mono text-sm text-amber-600 font-bold whitespace-nowrap"
+                      >
+                        -$3.1M
+                      </td>
+                      <td class="py-3 px-3 text-center">
+                        <span
+                          class="inline-flex px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 font-mono text-[10px] font-bold"
+                        >
+                          ĐÌNH TRỆ CAO
+                        </span>
+                      </td>
+                    </tr>
+                    <!-- Row 5 -->
+                    <tr class="hover:bg-slate-50/70 transition-colors">
+                      <td class="py-3 px-3">
+                        <div class="flex flex-col">
+                          <span class="font-semibold text-slate-900 text-xs"
+                            >Trưng Bày Hàng MEATDeli</span
+                          >
+                          <span class="text-slate-500 font-mono text-[10px]"
+                            >Tranh chấp diện tích Fresh Food</span
+                          >
+                        </div>
+                      </td>
+                      <td
+                        class="py-3 px-3 text-right font-mono text-sm text-slate-700 font-bold whitespace-nowrap"
+                      >
+                        -$1.8M
+                      </td>
+                      <td class="py-3 px-3 text-center">
+                        <span
+                          class="inline-flex px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 font-mono text-[10px] font-semibold"
+                        >
+                          KIỂM SOÁT ĐƯỢC
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- Summary Bar -->
+              <div
+                class="p-3 rounded-lg bg-rose-50/70 border border-rose-200/60 flex items-center justify-between"
+              >
+                <div
+                  class="flex items-center gap-1.5 text-rose-800 text-xs font-medium"
+                >
+                  <span class="material-symbols-outlined text-base"
+                    >warning</span
+                  >
+                  <span>Tổng thất thoát tiềm năng 12 tháng:</span>
+                </div>
+                <span class="text-rose-700 font-mono font-bold text-xs"
+                  >-$32.4M (77% Kỳ Vọng)</span
+                >
+              </div>
+            </div>
+          </section>
+          <!-- Section 5: Strategic Recommendation Card -->
+          <section class="px-8 pb-10 max-w-7xl">
+            <div
+              class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="p-2.5 rounded-lg bg-slate-100 text-slate-900 shrink-0"
+                >
+                  <span class="material-symbols-outlined text-2xl"
+                    >lightbulb</span
+                  >
+                </div>
+                <div class="flex flex-col gap-0.5">
+                  <span
+                    class="font-mono text-[10px] text-secondary font-bold uppercase"
+                    >Khuyến Nghị Hành Động (Day 45 - Day 90)</span
+                  >
+                  <h4 class="font-display text-sm font-bold text-slate-900">
+                    Kích Hoạt Phòng Tác Chiến (War-Room) Thống Nhất RACI
+                  </h4>
+                  <p class="text-xs text-slate-600">
+                    Thống nhất thẩm quyền phê duyệt thương mại trong 14 ngày;
+                    tách bạch KPI tối ưu chi phí điểm bán hiện hữu với mở mới có
+                    chọn lọc.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-2.5 shrink-0 w-full md:w-auto">
+                <a
+                  class="px-3.5 py-2 rounded-lg border border-slate-200 hover:bg-slate-50 text-slate-700 text-xs font-semibold transition-colors"
+                  data-path="gia-lap-can-thiep-intervention-simulator"
+                  href="#"
+                >
+                  Giả Lập Can Thiệp
+                </a>
+                <a
+                  class="px-3.5 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold transition-colors shadow-sm"
+                  data-path="chan-doan-tuckman-va-rui-ro-imo"
+                  href="#"
+                >
+                  Sang Bước 3: Tuckman &amp; Rủi Ro →
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+        <script>
+          function toggleDataset() {
+            const gapPoly = document.getElementById("poly-gap");
+            if (gapPoly) {
+              if (gapPoly.getAttribute("opacity") === "0") {
+                gapPoly.setAttribute("opacity", "0.9");
+              } else {
+                gapPoly.setAttribute("opacity", "0");
+              }
+            }
+          }
+        </script>
+      </main>
+    </div>
+  </body>
+</html>

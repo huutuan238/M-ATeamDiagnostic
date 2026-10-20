@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_dashboard" name="shell-type" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              slate: {
+                50: "#f8fafc",
+                100: "#f1f5f9",
+                200: "#e2e8f0",
+                300: "#cbd5e1",
+                400: "#94a3b8",
+                500: "#64748b",
+                600: "#475569",
+                700: "#334155",
+                800: "#1e293b",
+                900: "#0f172a",
+              },
+              primary: "#0284c7",
+              "primary-hover": "#0369a1",
+            },
+            fontFamily: {
+              body: ["Inter", "sans-serif"],
+              display: ["Plus Jakarta Sans", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-slate-50 font-body text-slate-800 antialiased selection:bg-sky-100 selection:text-sky-900"
+  >
+    <header
+      class="fixed top-0 left-0 right-0 z-50 h-16 bg-white/95 backdrop-blur-md border-b border-slate-200 flex items-center justify-between px-6 shadow-sm"
+    >
+      <div class="flex items-center gap-6">
+        <div class="flex items-center gap-2.5">
+          <img
+            alt="SynergyIQ Logo"
+            class="h-8 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRQuIzUP-0KFw1MSqvj-G3R1rLPWsyxIhbw5H4vGVZNIqvZd1TMqLaRg7kwuxWuSqEAbLqqN2yCA0RlcN45h1FQ6ie-LgJEJrkQ2IWSNkEp2AuD3_vSYz84Ybp07ipAszzGv6xcW6JJKNx6uRolkOZ9vOnkb6npE2iM6WFxlPMMA34l4Yn-Ed676if_CEHj16CFDRnE55d-vkiCzvHhyAxFg9nAuT-rE1ZlY0kpqKRMJ1nkFfX8Via"
+          />
+          <div class="flex flex-col">
+            <span
+              class="font-display font-bold text-slate-900 text-base tracking-tight leading-tight"
+              >SynergyIQ</span
+            ><span
+              class="font-mono text-[10px] text-sky-600 font-semibold tracking-wider uppercase"
+              >M&amp;A Intelligence</span
+            >
+          </div>
+        </div>
+        <div class="h-5 w-px bg-slate-200"></div>
+        <div
+          class="flex items-center gap-2 bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-lg"
+        >
+          <span class="material-symbols-outlined text-slate-600 text-lg"
+            >corporate_fare</span
+          >
+          <div class="flex flex-col">
+            <span
+              class="text-[9px] font-mono font-medium text-slate-600 uppercase tracking-wider"
+              >Target Deal Portfolio</span
+            ><span
+              class="text-xs font-semibold text-slate-800 truncate max-w-[210px]"
+              >Masan Consumer + VinCommerce</span
+            >
+          </div>
+          <span class="material-symbols-outlined text-slate-400 text-base"
+            >arrow_drop_down</span
+          >
+        </div>
+        <div
+          class="hidden xl:flex items-center gap-2 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg"
+        >
+          <span class="relative flex h-2 w-2"
+            ><span
+              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"
+            ></span
+            ><span
+              class="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"
+            ></span></span
+          ><span
+            class="font-mono text-xs text-emerald-700 font-semibold uppercase tracking-wide"
+            >Giai đoạn: 90 Ngày Đầu</span
+          >
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="relative flex items-center justify-center">
+          <button
+            class="p-2 text-slate-500 hover:text-slate-800 hover:bg-slate-100 rounded-lg transition-colors relative"
+            type="button"
+          >
+            <span class="material-symbols-outlined text-xl">notifications</span
+            ><span
+              class="absolute top-1.5 right-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-rose-500 text-white font-mono text-[9px] font-bold"
+              >3</span
+            >
+          </button>
+        </div>
+        <div class="h-5 w-px bg-slate-200"></div>
+        <div class="flex items-center gap-2.5">
+          <div class="flex flex-col text-right hidden sm:flex">
+            <span class="text-xs font-semibold text-slate-800 leading-tight"
+              >Trần Nam Quân</span
+            ><span class="text-[10px] font-mono text-slate-600 uppercase"
+              >IMO Lead</span
+            >
+          </div>
+          <img
+            alt="Profile"
+            class="w-8 h-8 rounded-full object-cover border border-slate-300"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuApKzrf3TtIfhMjzSaAC_DM_jujXOl18pprTYaJkK4ev37mT1q-ypokHwR4xWmsNevTxBvq4AiY18kUq095t3Gv5RYvtlCPgerkxF6ibP5vEQWitTKXgIjr8ZUFXKXzN0atZcZcxwxZcu3bCP-g9Y8REaWsUG_Cr5bEUB5tWCu4BgEwOBLjnsxE_f5CKq8MPbx2jIMWkug6HvbuUqj33GFn0FVDojUehL5ik0A44w9TVgKRK9bg50i1"
+          />
+        </div>
+      </div>
+    </header>
+    <aside
+      class="fixed left-0 top-16 bottom-0 w-64 bg-white border-r border-slate-200 z-40 flex flex-col justify-between py-5"
+    >
+      <div class="flex flex-col gap-1 px-4">
+        <div class="px-3 py-1 mb-2 flex items-center justify-between">
+          <span
+            class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider"
+            >Quy trình</span
+          ><span
+            class="text-xs font-semibold text-sky-600 bg-sky-50 px-2 py-0.5 rounded"
+            >05 Giai đoạn</span
+          >
+        </div>
+        <nav class="flex flex-col gap-1">
+          <a
+            class="flex items-center gap-3 px-3 py-2 rounded-lg bg-slate-900 text-white font-medium shadow-sm transition-all text-xs"
+            href="deal_selector.html"
+            ><span class="material-symbols-outlined text-base">dataset</span
+            ><span>1. Ngân Hàng Deal</span></a
+          ><a
+            class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all text-xs font-medium"
+            href="friction_index.html"
+            ><span class="material-symbols-outlined text-base text-slate-400"
+              >compare_arrows</span
+            ><span>2. Chấm Điểm Lệch</span></a
+          ><a
+            class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all text-xs font-medium"
+            href="imo_diagnostic.html"
+            ><span class="material-symbols-outlined text-base text-slate-400"
+              >analytics</span
+            ><span>3. Tuckman &amp; Rủi Ro</span></a
+          ><a
+            class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all text-xs font-medium"
+            href="intervention_simulator.html"
+            ><span class="material-symbols-outlined text-base text-slate-400"
+              >tune</span
+            ><span>4. Giả Lập Can Thiệp</span></a
+          ><a
+            class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all text-xs font-medium"
+            href="synergy_dashboard.html"
+            ><span class="material-symbols-outlined text-base text-slate-400"
+              >insights</span
+            ><span>5. Báo Cáo Synergy</span></a
+          >
+        </nav>
+      </div>
+      <div class="px-4">
+        <div
+          class="bg-slate-50 border border-slate-200 p-3.5 rounded-xl flex flex-col gap-2"
+        >
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-medium text-slate-500"
+              >Synergy Run-Rate</span
+            ><span class="text-xs font-bold text-slate-900">78.4%</span>
+          </div>
+          <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
+            <div class="bg-emerald-500 h-full rounded-full w-[78%]"></div>
+          </div>
+          <div
+            class="flex justify-between items-center text-slate-500 text-[11px]"
+          >
+            <span>Mục tiêu: $42M</span
+            ><span class="font-medium text-slate-700">$33M</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <div class="pl-64">
+      <main class="w-full pt-16 bg-slate-50 min-h-screen">
+        <div class="p-6 max-w-7xl mx-auto flex flex-col gap-6">
+          <!-- Top Context & Header -->
+          <div
+            class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 bg-white p-5 rounded-xl border border-slate-200 shadow-sm"
+          >
+            <div class="flex flex-col gap-1">
+              <div class="flex items-center gap-2">
+                <span
+                  class="px-2 py-0.5 bg-slate-100 rounded text-slate-600 font-mono text-xs uppercase font-medium"
+                  >Mô-đun 03</span
+                >
+                <span class="text-slate-300">/</span>
+                <span
+                  class="px-2 py-0.5 bg-rose-50 border border-rose-200 rounded text-rose-700 font-mono text-xs font-semibold flex items-center gap-1.5"
+                >
+                  <span
+                    class="w-1.5 h-1.5 rounded-full bg-rose-600 animate-pulse"
+                  ></span>
+                  DIAL-IN RISK: 76/100
+                </span>
+              </div>
+              <h1
+                class="text-xl lg:text-2xl font-display font-bold text-slate-900 tracking-tight mt-1"
+              >
+                Ma Trận Chẩn Đoán Nhóm IMO &amp; Giai Đoạn Tuckman
+              </h1>
+              <p class="text-xs text-slate-600">
+                Chẩn đoán động học hành vi liên tổ chức Deal Masan Consumer +
+                VinCommerce.
+              </p>
+            </div>
+            <div class="flex items-center gap-3">
+              <div
+                class="bg-rose-50 border border-rose-100 px-3.5 py-2 rounded-lg flex items-center gap-3"
+              >
+                <div
+                  class="w-8 h-8 rounded-md bg-rose-100 text-rose-700 flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined text-lg"
+                    >crisis_alert</span
+                  >
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-[10px] font-mono text-slate-600 uppercase"
+                    >IMO Status</span
+                  >
+                  <span class="font-mono font-bold text-sm text-rose-700"
+                    >PEAK STORMING</span
+                  >
+                </div>
+              </div>
+              <button
+                class="bg-slate-900 hover:bg-slate-800 text-white px-3.5 py-2 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-colors shadow-sm"
+                type="button"
+              >
+                <span class="material-symbols-outlined text-base"
+                  >download</span
+                >
+                Tải IMO Audit
+              </button>
+            </div>
+          </div>
+          <!-- Tuckman Pipeline Tracker -->
+          <div
+            class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex flex-col gap-4"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-slate-400 text-lg"
+                  >timeline</span
+                >
+                <span
+                  class="text-xs font-mono font-semibold text-slate-700 uppercase tracking-wider"
+                  >Tiến Trình Tuckman Pipeline</span
+                >
+              </div>
+              <span
+                class="px-2.5 py-1 bg-amber-50 border border-amber-200 text-amber-800 rounded-md text-xs font-mono font-semibold flex items-center gap-1.5"
+              >
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
+                Kẹt Pha Storming (43 ngày)
+              </span>
+            </div>
+            <!-- 4 Stages Visual Bar -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
+              <!-- Stage 1 -->
+              <div
+                class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg flex flex-col gap-1.5"
+              >
+                <div class="flex items-center justify-between">
+                  <span
+                    class="text-[10px] font-mono text-slate-600 uppercase font-medium"
+                    >Giai đoạn 01</span
+                  >
+                  <span
+                    class="text-[10px] font-mono font-semibold text-emerald-700 bg-emerald-100/70 px-1.5 py-0.5 rounded"
+                    >100%</span
+                  >
+                </div>
+                <span class="font-display font-bold text-sm text-slate-800"
+                  >Forming</span
+                >
+                <div
+                  class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden mt-1"
+                >
+                  <div class="h-full bg-emerald-500 w-full"></div>
+                </div>
+                <span class="text-[11px] text-slate-600">Đã hoàn thành</span>
+              </div>
+              <!-- Stage 2 (ACTIVE ALERT) -->
+              <div
+                class="bg-rose-50/60 border-2 border-rose-300 p-3.5 rounded-lg flex flex-col gap-1.5 shadow-sm relative"
+              >
+                <div class="flex items-center justify-between">
+                  <span
+                    class="text-[10px] font-mono font-bold text-rose-700 uppercase flex items-center gap-1"
+                  >
+                    <span
+                      class="w-1.5 h-1.5 rounded-full bg-rose-600 animate-ping"
+                    ></span>
+                    Giai đoạn 02
+                  </span>
+                  <span
+                    class="text-[10px] font-mono font-bold text-rose-800 bg-rose-200/80 px-1.5 py-0.5 rounded"
+                    >Đang Xảy Ra</span
+                  >
+                </div>
+                <span class="font-display font-bold text-sm text-rose-900"
+                  >Storming Đỉnh Điểm</span
+                >
+                <div
+                  class="w-full bg-rose-200 h-1.5 rounded-full overflow-hidden mt-1"
+                >
+                  <div class="h-full bg-rose-600 w-[88%]"></div>
+                </div>
+                <span class="text-[11px] text-rose-800 font-medium"
+                  >Xung đột quyền lực &amp; KPI</span
+                >
+              </div>
+              <!-- Stage 3 -->
+              <div
+                class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg flex flex-col gap-1.5 opacity-70"
+              >
+                <div class="flex items-center justify-between">
+                  <span
+                    class="text-[10px] font-mono text-slate-600 uppercase font-medium"
+                    >Giai đoạn 03</span
+                  >
+                  <span
+                    class="text-[10px] font-mono text-slate-600 bg-slate-200 px-1.5 py-0.5 rounded"
+                    >0%</span
+                  >
+                </div>
+                <span class="font-display font-bold text-sm text-slate-700"
+                  >Norming</span
+                >
+                <div
+                  class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden mt-1"
+                >
+                  <div class="h-full bg-slate-400 w-0"></div>
+                </div>
+                <span class="text-[11px] text-slate-600"
+                  >Mục tiêu: Ngày +90</span
+                >
+              </div>
+              <!-- Stage 4 -->
+              <div
+                class="bg-slate-50 border border-slate-200 p-3.5 rounded-lg flex flex-col gap-1.5 opacity-50"
+              >
+                <div class="flex items-center justify-between">
+                  <span
+                    class="text-[10px] font-mono text-slate-600 uppercase font-medium"
+                    >Giai đoạn 04</span
+                  >
+                  <span
+                    class="text-[10px] font-mono text-slate-600 bg-slate-200 px-1.5 py-0.5 rounded"
+                    >0%</span
+                  >
+                </div>
+                <span class="font-display font-bold text-sm text-slate-700"
+                  >Performing</span
+                >
+                <div
+                  class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden mt-1"
+                >
+                  <div class="h-full bg-emerald-500 w-0"></div>
+                </div>
+                <span class="text-[11px] text-slate-600"
+                  >Dự kiến: Quý 3/2020</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Main Content Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <!-- Left Column: 3 IMO Teams (7 Cols) -->
+            <div class="lg:col-span-7 flex flex-col gap-4">
+              <div class="flex items-center justify-between">
+                <h2
+                  class="font-display font-bold text-base text-slate-900 flex items-center gap-2"
+                >
+                  <span class="material-symbols-outlined text-slate-500 text-lg"
+                    >groups</span
+                  >
+                  3 Nhóm Tích Hợp Lâm Thời (IMO Teams)
+                </h2>
+                <span class="text-xs font-mono text-slate-600"
+                  >3 Tổ Công Tác Trọng Điểm</span
+                >
+              </div>
+              <!-- Team 1 -->
+              <div
+                class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm flex flex-col gap-3"
+              >
+                <div class="flex items-start justify-between gap-2">
+                  <div>
+                    <h3 class="font-display font-bold text-sm text-slate-900">
+                      Ban Chuỗi Cung Ứng &amp; Kho Vận
+                    </h3>
+                    <p class="text-xs text-slate-600">
+                      Trưởng ban:
+                      <span class="font-medium text-slate-800"
+                        >Lê Hữu Đạt (MSN) &amp; Vũ Lan (WCM)</span
+                      >
+                    </p>
+                  </div>
+                  <span
+                    class="px-2 py-0.5 bg-rose-100 text-rose-700 font-mono text-[11px] font-semibold rounded shrink-0"
+                  >
+                    Storming Nặng
+                  </span>
+                </div>
+                <div
+                  class="grid grid-cols-2 gap-2 bg-slate-50 p-2.5 rounded-lg border border-slate-100 text-xs"
+                >
+                  <div>
+                    <span class="text-slate-600 block text-[11px]"
+                      >Tiến độ tích hợp:</span
+                    >
+                    <div class="flex items-center gap-2 mt-0.5">
+                      <span class="font-mono font-bold text-slate-900"
+                        >31%</span
+                      >
+                      <div
+                        class="w-20 bg-slate-200 h-1.5 rounded-full overflow-hidden"
+                      >
+                        <div class="bg-amber-500 h-full w-[31%]"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="text-slate-600 block text-[11px]"
+                      >Trạng thái:</span
+                    >
+                    <span class="font-medium text-rose-700"
+                      >Trễ 18 ngày tiến độ</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="p-2 bg-rose-50 border border-rose-200 rounded-lg flex items-center gap-2 text-xs text-rose-800"
+                >
+                  <span
+                    class="material-symbols-outlined text-base shrink-0 text-rose-600"
+                    >warning</span
+                  >
+                  <span
+                    ><strong>Cảnh báo chính:</strong> 03 Giám đốc kho nòng cốt
+                    Miền Bắc đã nộp đơn thôi việc.</span
+                  >
+                </div>
+              </div>
+              <!-- Team 2 -->
+              <div
+                class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm flex flex-col gap-3"
+              >
+                <div class="flex items-start justify-between gap-2">
+                  <div>
+                    <h3 class="font-display font-bold text-sm text-slate-900">
+                      Tổ Hợp Nhất Hệ Thống Dữ Liệu &amp; ERP
+                    </h3>
+                    <p class="text-xs text-slate-600">
+                      Trưởng ban:
+                      <span class="font-medium text-slate-800"
+                        >Nguyễn Quốc Thái (MSN)</span
+                      >
+                    </p>
+                  </div>
+                  <span
+                    class="px-2 py-0.5 bg-sky-100 text-sky-800 font-mono text-[11px] font-semibold rounded shrink-0"
+                  >
+                    Forming Bất An
+                  </span>
+                </div>
+                <div
+                  class="grid grid-cols-2 gap-2 bg-slate-50 p-2.5 rounded-lg border border-slate-100 text-xs"
+                >
+                  <div>
+                    <span class="text-slate-600 block text-[11px]"
+                      >Tiến độ kết nối API/POS:</span
+                    >
+                    <div class="flex items-center gap-2 mt-0.5">
+                      <span class="font-mono font-bold text-slate-900"
+                        >42%</span
+                      >
+                      <div
+                        class="w-20 bg-slate-200 h-1.5 rounded-full overflow-hidden"
+                      >
+                        <div class="bg-sky-600 h-full w-[42%]"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="text-slate-600 block text-[11px]"
+                      >Trạng thái:</span
+                    >
+                    <span class="font-medium text-slate-700"
+                      >Chưa ký Team Charter</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="p-2 bg-amber-50 border border-amber-200 rounded-lg flex items-center gap-2 text-xs text-amber-900"
+                >
+                  <span
+                    class="material-symbols-outlined text-base shrink-0 text-amber-600"
+                    >lock_clock</span
+                  >
+                  <span
+                    ><strong>Cảnh báo chính:</strong> Nhân sự VinCommerce lo
+                    ngại sa thải, chậm chia sẻ tài liệu API.</span
+                  >
+                </div>
+              </div>
+              <!-- Team 3 -->
+              <div
+                class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm flex flex-col gap-3"
+              >
+                <div class="flex items-start justify-between gap-2">
+                  <div>
+                    <h3 class="font-display font-bold text-sm text-slate-900">
+                      Ủy Ban Tái Cấu Trúc &amp; Văn Hóa
+                    </h3>
+                    <p class="text-xs text-slate-600">
+                      Trưởng ban:
+                      <span class="font-medium text-slate-800"
+                        >Phạm Hoàng Minh (HRD)</span
+                      >
+                    </p>
+                  </div>
+                  <span
+                    class="px-2 py-0.5 bg-purple-100 text-purple-800 font-mono text-[11px] font-semibold rounded shrink-0"
+                  >
+                    Storming Tiềm Ẩn
+                  </span>
+                </div>
+                <div
+                  class="grid grid-cols-2 gap-2 bg-slate-50 p-2.5 rounded-lg border border-slate-100 text-xs"
+                >
+                  <div>
+                    <span class="text-slate-600 block text-[11px]"
+                      >Chuẩn hóa chức danh:</span
+                    >
+                    <div class="flex items-center gap-2 mt-0.5">
+                      <span class="font-mono font-bold text-slate-900"
+                        >19%</span
+                      >
+                      <div
+                        class="w-20 bg-slate-200 h-1.5 rounded-full overflow-hidden"
+                      >
+                        <div class="bg-purple-500 h-full w-[19%]"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="text-slate-600 block text-[11px]"
+                      >Độ vênh lương thưởng:</span
+                    >
+                    <span class="font-medium text-purple-800"
+                      >38.4% chênh lệch</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="p-2 bg-purple-50 border border-purple-200 rounded-lg flex items-center gap-2 text-xs text-purple-900"
+                >
+                  <span
+                    class="material-symbols-outlined text-base shrink-0 text-purple-600"
+                    >badge</span
+                  >
+                  <span
+                    ><strong>Cảnh báo chính:</strong> Mức độ tin cậy lãnh đạo
+                    mới chỉ đạt 41% trong khảo sát nội bộ.</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Right Column: Metric Early Warning Cards + Action Sandbox (5 Cols) -->
+            <div class="lg:col-span-5 flex flex-col gap-4">
+              <div class="flex items-center justify-between">
+                <h2
+                  class="font-display font-bold text-base text-slate-900 flex items-center gap-2"
+                >
+                  <span class="material-symbols-outlined text-rose-500 text-lg"
+                    >error_outline</span
+                  >
+                  Cảnh Báo Rủi Ro Khẩn Cấp
+                </h2>
+                <span
+                  class="px-2 py-0.5 bg-rose-100 text-rose-700 font-mono text-[10px] font-bold rounded"
+                  >3 METRICS</span
+                >
+              </div>
+              <!-- Metric Alert 1 -->
+              <div
+                class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm flex items-center justify-between gap-3"
+              >
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-rose-50 border border-rose-100 text-rose-600 flex items-center justify-center shrink-0"
+                  >
+                    <span class="material-symbols-outlined text-xl"
+                      >group_remove</span
+                    >
+                  </div>
+                  <div>
+                    <span
+                      class="text-[11px] font-mono text-slate-600 uppercase block font-medium"
+                      >Talent Drain Rủi Ro</span
+                    >
+                    <h4 class="font-display font-bold text-slate-900 text-sm">
+                      Key Talent Rời Bỏ
+                    </h4>
+                    <span class="text-xs text-slate-600"
+                      >Nếu không kích hoạt gói giữ chân trong &lt;45 ngày</span
+                    >
+                  </div>
+                </div>
+                <div class="text-right shrink-0">
+                  <span class="text-xl font-mono font-bold text-rose-600 block"
+                    >32%</span
+                  >
+                  <span class="text-[10px] font-mono text-slate-600"
+                    >-$3.8M Rủi ro</span
+                  >
+                </div>
+              </div>
+              <!-- Metric Alert 2 -->
+              <div
+                class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm flex items-center justify-between gap-3"
+              >
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-amber-50 border border-amber-100 text-amber-600 flex items-center justify-center shrink-0"
+                  >
+                    <span class="material-symbols-outlined text-xl"
+                      >production_quantity_limits</span
+                    >
+                  </div>
+                  <div>
+                    <span
+                      class="text-[11px] font-mono text-slate-600 uppercase block font-medium"
+                      >Chuỗi FMCG Bị Nghẽn</span
+                    >
+                    <h4 class="font-display font-bold text-slate-900 text-sm">
+                      Hết Hàng Trên Kệ (OOS)
+                    </h4>
+                    <span class="text-xs text-slate-600"
+                      >Nghẽn đối soát công nợ tại 1,800 cửa hàng</span
+                    >
+                  </div>
+                </div>
+                <div class="text-right shrink-0">
+                  <span class="text-xl font-mono font-bold text-amber-600 block"
+                    >+14%</span
+                  >
+                  <span class="text-[10px] font-mono text-slate-600"
+                    >-45 Tỷ/Tháng</span
+                  >
+                </div>
+              </div>
+              <!-- Metric Alert 3 -->
+              <div
+                class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm flex items-center justify-between gap-3"
+              >
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-purple-50 border border-purple-100 text-purple-600 flex items-center justify-center shrink-0"
+                  >
+                    <span class="material-symbols-outlined text-xl">timer</span>
+                  </div>
+                  <div>
+                    <span
+                      class="text-[11px] font-mono text-slate-600 uppercase block font-medium"
+                      >Độ Trễ Phê Duyệt Kép</span
+                    >
+                    <h4 class="font-display font-bold text-slate-900 text-sm">
+                      Tốc Độ Ra Quyết Định
+                    </h4>
+                    <span class="text-xs text-slate-600"
+                      >Xử lý khiếu nại kho và phân phối điểm bán</span
+                    >
+                  </div>
+                </div>
+                <div class="text-right shrink-0">
+                  <span
+                    class="text-xl font-mono font-bold text-purple-600 block"
+                    >3 Ngày</span
+                  >
+                  <span class="text-[10px] font-mono text-slate-600"
+                    >Trước đó: 2 Giờ</span
+                  >
+                </div>
+              </div>
+              <!-- Value at Risk Summary Box -->
+              <div
+                class="bg-slate-100/80 border border-slate-200 rounded-xl p-3.5 flex items-center justify-between"
+              >
+                <div>
+                  <span
+                    class="text-[10px] font-mono text-slate-600 uppercase block font-medium"
+                    >Synergy Value At Risk (90 Ngày)</span
+                  >
+                  <span class="text-lg font-mono font-bold text-rose-600"
+                    >$14.6M</span
+                  >
+                </div>
+                <span
+                  class="px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-slate-700 font-mono text-xs font-semibold"
+                >
+                  4 giải pháp IMO sẵn sàng
+                </span>
+              </div>
+              <!-- Direct Intervention CTA -->
+              <div
+                class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm flex flex-col gap-3"
+              >
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-sky-600"
+                    >auto_fix_high</span
+                  >
+                  <span class="font-display font-bold text-sm text-slate-900"
+                    >Kích Hoạt Kịch Bản Can Thiệp</span
+                  >
+                </div>
+                <p class="text-xs text-slate-600">
+                  Chuyển ngay sang phòng giả lập để áp dụng các gói chính sách
+                  giảm xung đột cho nhóm Chuỗi Cung Ứng &amp; Văn Hóa.
+                </p>
+                <a
+                  class="w-full py-2.5 px-4 bg-sky-600 hover:bg-sky-700 text-white font-semibold text-xs text-center rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm"
+                  data-path="gia-lap-can-thiep-intervention-simulator"
+                  href="#"
+                >
+                  <span>Mở Trình Giả Lập Can Thiệp</span>
+                  <span class="material-symbols-outlined text-sm"
+                    >arrow_forward</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Footer Info Bar -->
+          <div
+            class="bg-white border border-slate-200 p-3 rounded-xl flex flex-col md:flex-row items-center justify-between gap-2 text-slate-600 font-mono text-xs"
+          >
+            <div class="flex items-center gap-3">
+              <span
+                class="flex items-center gap-1.5 text-slate-700 font-medium"
+              >
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                IMO Telemetry Active
+              </span>
+              <span>•</span>
+              <span>Deal: MSN-VCM-2019Q4</span>
+              <span>•</span>
+              <span>Audit: 14/01/2020</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-sky-600 hover:underline cursor-pointer"
+                >Xem Nhật Ký Quản Trị</span
+              >
+              <span>•</span>
+              <span class="text-slate-600 hover:underline cursor-pointer"
+                >Xuất Biên Bản C-Suite</span
+              >
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_dashboard" name="shell-type" />
+    <title>
+      SynergyIQ - Báo Cáo Điều Hành &amp; Dự Báo Hiện Thực Hóa Synergy
+    </title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: "#eff6ff",
+                100: "#dbeafe",
+                500: "#0284c7",
+                600: "#0369a1",
+                700: "#075985",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Plus Jakarta Sans", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-[#f8fafc] font-sans text-slate-800 antialiased selection:bg-sky-500 selection:text-white"
+  >
+    <!-- Top Navigation Header (Clean Light) -->
+    <header
+      class="fixed top-0 left-0 right-0 z-50 h-16 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm flex items-center justify-between px-6"
+    >
+      <div class="flex items-center gap-6">
+        <!-- Brand Logo -->
+        <div class="flex items-center gap-3">
+          <div
+            class="w-8 h-8 rounded-lg bg-sky-600 flex items-center justify-center text-white font-bold font-display shadow-sm"
+          >
+            S
+          </div>
+          <div class="flex flex-col">
+            <span
+              class="font-display font-bold text-slate-900 leading-none text-base tracking-tight"
+              >SynergyIQ</span
+            >
+            <span
+              class="font-mono text-[10px] text-sky-600 font-semibold uppercase tracking-wider"
+              >M&amp;A Intelligence</span
+            >
+          </div>
+        </div>
+        <div class="h-5 w-px bg-slate-200"></div>
+        <!-- Target Portfolio Pill -->
+        <div
+          class="flex items-center gap-2.5 bg-slate-50 border border-slate-200/80 px-3 py-1.5 rounded-lg text-xs"
+        >
+          <span class="material-symbols-outlined text-sky-600 text-[18px]"
+            >corporate_fare</span
+          >
+          <div class="flex flex-col">
+            <span
+              class="text-[10px] text-slate-400 uppercase font-semibold tracking-wider"
+              >Target Deal</span
+            >
+            <span class="text-slate-800 font-medium truncate max-w-[200px]"
+              >Masan Consumer × VinCommerce</span
+            >
+          </div>
+          <span class="material-symbols-outlined text-slate-400 text-sm"
+            >arrow_drop_down</span
+          >
+        </div>
+        <!-- Active Phase Tag -->
+        <div
+          class="hidden xl:flex items-center gap-2 bg-emerald-50 border border-emerald-200/60 px-3 py-1.5 rounded-lg text-xs"
+        >
+          <span class="relative flex h-2 w-2">
+            <span
+              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"
+            ></span>
+            <span
+              class="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"
+            ></span>
+          </span>
+          <span
+            class="font-mono text-[11px] text-emerald-700 font-semibold uppercase tracking-wide"
+            >90 Ngày Đầu: Tích Hợp Nguồn Lực</span
+          >
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <button
+          class="relative p-2 text-slate-500 hover:text-slate-800 hover:bg-slate-100 rounded-lg transition-colors"
+          type="button"
+        >
+          <span class="material-symbols-outlined text-[20px]"
+            >notifications</span
+          >
+          <span
+            class="absolute top-1.5 right-1.5 flex h-2 w-2 rounded-full bg-rose-500 ring-2 ring-white"
+          ></span>
+        </button>
+        <div class="h-5 w-px bg-slate-200"></div>
+        <div class="flex items-center gap-2.5">
+          <div class="flex flex-col text-right hidden sm:flex">
+            <span class="text-xs font-semibold text-slate-800 leading-tight"
+              >Trần Nam Quân</span
+            >
+            <span class="text-[10px] font-mono text-slate-500 uppercase"
+              >IMO Lead</span
+            >
+          </div>
+          <img
+            alt="Profile"
+            class="w-8 h-8 rounded-full object-cover ring-2 ring-slate-100 shadow-sm"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuApKzrf3TtIfhMjzSaAC_DM_jujXOl18pprTYaJkK4ev37mT1q-ypokHwR4xWmsNevTxBvq4AiY18kUq095t3Gv5RYvtlCPgerkxF6ibP5vEQWitTKXgIjr8ZUFXKXzN0atZcZcxwxZcu3bCP-g9Y8REaWsUG_Cr5bEUB5tWCu4BgEwOBLjnsxE_f5CKq8MPbx2jIMWkug6HvbuUqj33GFn0FVDojUehL5ik0A44w9TVgKRK9bg50i1"
+          />
+        </div>
+      </div>
+    </header>
+    <!-- Left Sidebar (Clean Light) -->
+    <aside
+      class="fixed left-0 top-16 bottom-0 w-64 bg-white border-r border-slate-200 z-40 flex flex-col justify-between py-5"
+    >
+      <div class="flex flex-col gap-1 px-4">
+        <div class="px-3 py-1 mb-2 flex items-center justify-between">
+          <span
+            class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider"
+            >Quy trình</span
+          ><span
+            class="text-xs font-semibold text-sky-600 bg-sky-50 px-2 py-0.5 rounded"
+            >05 Giai đoạn</span
+          >
+        </div>
+        <nav class="flex flex-col gap-1">
+          <a
+            class="flex items-center gap-3 px-3 py-2 rounded-lg bg-slate-900 text-white font-medium shadow-sm transition-all text-xs"
+            href="deal_selector.html"
+            ><span class="material-symbols-outlined text-base">dataset</span
+            ><span>1. Ngân Hàng Deal</span></a
+          ><a
+            class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all text-xs font-medium"
+            href="friction_index.html"
+            ><span class="material-symbols-outlined text-base text-slate-400"
+              >compare_arrows</span
+            ><span>2. Chấm Điểm Lệch</span></a
+          ><a
+            class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all text-xs font-medium"
+            href="imo_diagnostic.html"
+            ><span class="material-symbols-outlined text-base text-slate-400"
+              >analytics</span
+            ><span>3. Tuckman &amp; Rủi Ro</span></a
+          ><a
+            class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all text-xs font-medium"
+            href="intervention_simulator.html"
+            ><span class="material-symbols-outlined text-base text-slate-400"
+              >tune</span
+            ><span>4. Giả Lập Can Thiệp</span></a
+          ><a
+            class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all text-xs font-medium"
+            href="synergy_dashboard.html"
+            ><span class="material-symbols-outlined text-base text-slate-400"
+              >insights</span
+            ><span>5. Báo Cáo Synergy</span></a
+          >
+        </nav>
+      </div>
+      <div class="px-4">
+        <div
+          class="bg-slate-50 border border-slate-200 p-3.5 rounded-xl flex flex-col gap-2"
+        >
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-medium text-slate-500"
+              >Synergy Run-Rate</span
+            ><span class="text-xs font-bold text-slate-900">78.4%</span>
+          </div>
+          <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
+            <div class="bg-emerald-500 h-full rounded-full w-[78%]"></div>
+          </div>
+          <div
+            class="flex justify-between items-center text-slate-500 text-[11px]"
+          >
+            <span>Mục tiêu: $42M</span
+            ><span class="font-medium text-slate-700">$33M</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- Main Content Area (Clean Light Mode) -->
+    <div class="pl-64">
+      <main class="w-full pt-16 min-h-screen bg-[#f8fafc]">
+        <div class="p-8 max-w-7xl mx-auto flex flex-col gap-6">
+          <!-- Top Header & KPI Executive Summary Strip -->
+          <div
+            class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm flex flex-col gap-5"
+          >
+            <div
+              class="flex flex-col lg:flex-row lg:items-center justify-between gap-4"
+            >
+              <div class="flex flex-col gap-1">
+                <div class="flex items-center gap-2">
+                  <span
+                    class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-semibold"
+                  >
+                    <span
+                      class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"
+                    ></span>
+                    ĐÃ PHÊ DUYỆT BỞI HỘI ĐỒNG IMO
+                  </span>
+                  <span class="text-slate-400 text-xs font-mono"
+                    >#SYNERGY-Q3-VN-90D</span
+                  >
+                </div>
+                <h1
+                  class="font-display font-bold text-2xl text-slate-900 tracking-tight mt-1"
+                >
+                  Báo Cáo Điều Hành &amp; Dự Báo Hiện Thực Hóa Synergy
+                </h1>
+                <p class="text-xs text-slate-500">
+                  Đánh giá định lượng kết quả hợp nhất Masan Consumer ×
+                  VinCommerce sau 90 ngày tích hợp chiến lược.
+                </p>
+              </div>
+              <!-- Quick Action Buttons -->
+              <div class="flex items-center gap-2.5 flex-shrink-0">
+                <button
+                  class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200 transition-colors shadow-xs"
+                  type="button"
+                >
+                  <span
+                    class="material-symbols-outlined text-slate-500 text-base"
+                    >download</span
+                  >
+                  <span>Xuất Excel</span>
+                </button>
+                <button
+                  class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold shadow-xs transition-colors"
+                  type="button"
+                >
+                  <span class="material-symbols-outlined text-base"
+                    >picture_as_pdf</span
+                  >
+                  <span>Tải Báo Cáo</span>
+                </button>
+              </div>
+            </div>
+            <!-- 4 Core Executive KPI Cards -->
+            <div
+              class="grid grid-cols-2 md:grid-cols-4 gap-3 pt-3 border-t border-slate-100"
+            >
+              <div
+                class="bg-slate-50/80 border border-slate-200/70 rounded-lg p-3.5"
+              >
+                <span
+                  class="text-[11px] font-semibold text-slate-500 uppercase tracking-wide"
+                  >Thời Gian Giả Lập</span
+                >
+                <div class="text-lg font-bold font-mono text-slate-900 mt-1">
+                  Day 1 - 90
+                </div>
+                <span class="text-[11px] text-slate-500"
+                  >Giai đoạn ổn định hóa</span
+                >
+              </div>
+              <div
+                class="bg-emerald-50/50 border border-emerald-100 rounded-lg p-3.5"
+              >
+                <span
+                  class="text-[11px] font-semibold text-emerald-800 uppercase tracking-wide"
+                  >Độ Lệch Văn Hóa</span
+                >
+                <div class="text-lg font-bold font-mono text-emerald-600 mt-1">
+                  -64% Ma Sát
+                </div>
+                <span class="text-[11px] text-emerald-700"
+                  >Đạt ngưỡng bình thường</span
+                >
+              </div>
+              <div class="bg-sky-50/50 border border-sky-100 rounded-lg p-3.5">
+                <span
+                  class="text-[11px] font-semibold text-sky-800 uppercase tracking-wide"
+                  >EBITDA Break-Even</span
+                >
+                <div class="text-lg font-bold font-mono text-sky-600 mt-1">
+                  +4 Tháng Sớm Hơn
+                </div>
+                <span class="text-[11px] text-sky-700"
+                  >Vượt mục tiêu kế hoạch</span
+                >
+              </div>
+              <div
+                class="bg-slate-50/80 border border-slate-200/70 rounded-lg p-3.5"
+              >
+                <span
+                  class="text-[11px] font-semibold text-slate-500 uppercase tracking-wide"
+                  >Tổng Synergy Ghi Nhận</span
+                >
+                <div class="text-lg font-bold font-mono text-emerald-600 mt-1">
+                  1.100 Tỷ VND
+                </div>
+                <span class="text-[11px] text-slate-500"
+                  >Đạt 104.7% kế hoạch</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- 3 Pillar Metric Cards (People, Process, Financial) -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Pillar 1: Con người & Văn hóa -->
+            <div
+              class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm flex flex-col justify-between"
+            >
+              <div>
+                <div
+                  class="flex items-center justify-between pb-3 border-b border-slate-100"
+                >
+                  <div class="flex items-center gap-2.5">
+                    <div
+                      class="w-8 h-8 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center"
+                    >
+                      <span class="material-symbols-outlined text-[20px]"
+                        >groups</span
+                      >
+                    </div>
+                    <div>
+                      <h3 class="font-display font-bold text-slate-900 text-sm">
+                        Con Người &amp; Văn Hóa
+                      </h3>
+                      <span class="text-[11px] text-slate-400"
+                        >Khối Đội Ngũ</span
+                      >
+                    </div>
+                  </div>
+                  <span
+                    class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-semibold text-[11px] border border-emerald-200"
+                    >Tích Cực</span
+                  >
+                </div>
+                <div class="mt-4 flex flex-col gap-3.5">
+                  <div>
+                    <div class="flex justify-between items-center text-xs mb-1">
+                      <span class="text-slate-600 font-medium"
+                        >Giai Đoạn Tuckman</span
+                      >
+                      <span class="font-mono font-bold text-emerald-600"
+                        >Norming (Ổn Định)</span
+                      >
+                    </div>
+                    <div
+                      class="w-full bg-slate-100 h-2 rounded-full overflow-hidden flex"
+                    >
+                      <div class="bg-slate-300 h-full w-1/4"></div>
+                      <div class="bg-amber-300 h-full w-1/4"></div>
+                      <div class="bg-emerald-500 h-full w-1/4"></div>
+                      <div class="bg-slate-200 h-full w-1/4"></div>
+                    </div>
+                  </div>
+                  <div
+                    class="flex justify-between items-center py-2 border-b border-slate-100 text-xs"
+                  >
+                    <span class="text-slate-600"
+                      >Độ Rõ Ràng Vai Trò &amp; RACI</span
+                    >
+                    <div class="flex items-center gap-1.5">
+                      <span class="font-mono font-bold text-slate-900"
+                        >86.0%</span
+                      >
+                      <span
+                        class="font-mono text-emerald-600 text-[11px] font-semibold"
+                        >(+38.0%)</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="flex justify-between items-center py-2 border-b border-slate-100 text-xs"
+                  >
+                    <span class="text-slate-600"
+                      >Lòng Tin Nội Bộ (Trust Score)</span
+                    >
+                    <div class="flex items-center gap-1.5">
+                      <span class="font-mono font-bold text-slate-900"
+                        >74/100</span
+                      >
+                      <span
+                        class="font-mono text-emerald-600 text-[11px] font-semibold"
+                        >(+36 pts)</span
+                      >
+                    </div>
+                  </div>
+                  <div class="flex justify-between items-center text-xs">
+                    <span class="text-slate-600"
+                      >Giữ Chân Nhân Sự Chủ Chốt</span
+                    >
+                    <span class="font-mono font-bold text-sky-600"
+                      >89.4%
+                      <span class="text-slate-400 font-normal"
+                        >/ KH: 85%</span
+                      ></span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400"
+              >
+                <span>Khảo sát n=1.420 QL &amp; CHT</span>
+                <span class="text-emerald-600 font-medium">✓ Đã kiểm định</span>
+              </div>
+            </div>
+            <!-- Pillar 2: Quy trình & Chuỗi cung ứng -->
+            <div
+              class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm flex flex-col justify-between"
+            >
+              <div>
+                <div
+                  class="flex items-center justify-between pb-3 border-b border-slate-100"
+                >
+                  <div class="flex items-center gap-2.5">
+                    <div
+                      class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center"
+                    >
+                      <span class="material-symbols-outlined text-[20px]"
+                        >account_tree</span
+                      >
+                    </div>
+                    <div>
+                      <h3 class="font-display font-bold text-slate-900 text-sm">
+                        Quy Trình &amp; Vận Hành
+                      </h3>
+                      <span class="text-[11px] text-slate-400"
+                        >Chuỗi Cung Ứng</span
+                      >
+                    </div>
+                  </div>
+                  <span
+                    class="px-2 py-0.5 rounded-full bg-sky-50 text-sky-700 font-semibold text-[11px] border border-sky-200"
+                    >Tốc Độ Cao</span
+                  >
+                </div>
+                <div class="mt-4 flex flex-col gap-3.5">
+                  <div
+                    class="bg-slate-50 border border-slate-200/80 rounded-lg p-3 flex justify-between items-center"
+                  >
+                    <div>
+                      <span
+                        class="text-[10px] uppercase font-semibold text-slate-500"
+                        >Thời Gian Xử Lý Đơn</span
+                      >
+                      <div
+                        class="text-lg font-bold font-mono text-slate-900 mt-0.5"
+                      >
+                        34 Giờ
+                      </div>
+                    </div>
+                    <span
+                      class="text-xs font-mono font-semibold text-emerald-600 bg-emerald-50 px-2 py-1 rounded border border-emerald-100"
+                      >-28% vs Gốc</span
+                    >
+                  </div>
+                  <div
+                    class="flex justify-between items-center py-2 border-b border-slate-100 text-xs"
+                  >
+                    <span class="text-slate-600">Tuân Thủ SOP Tích Hợp</span>
+                    <div class="flex items-center gap-1.5">
+                      <span class="font-mono font-bold text-slate-900"
+                        >91.2%</span
+                      >
+                      <span
+                        class="font-mono text-emerald-600 text-[11px] font-semibold"
+                        >(Đạt chuẩn)</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="flex justify-between items-center py-2 border-b border-slate-100 text-xs"
+                  >
+                    <span class="text-slate-600"
+                      >Đồng Bộ Dữ Liệu Tồn Kho ERP</span
+                    >
+                    <div class="flex items-center gap-1.5">
+                      <span class="font-mono font-bold text-slate-900"
+                        >82.0%</span
+                      >
+                      <span
+                        class="font-mono text-sky-600 text-[11px] font-semibold"
+                        >SAP Realtime</span
+                      >
+                    </div>
+                  </div>
+                  <div class="flex justify-between items-center text-xs">
+                    <span class="text-slate-600">Vận Hành Điểm Bán</span>
+                    <span class="font-mono font-bold text-slate-900"
+                      >3.000+ Điểm WinMart+</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400"
+              >
+                <span>Kho Sóng Thần &amp; Kênh Siêu Thị</span>
+                <span class="text-sky-600 font-medium">Tự động EDI</span>
+              </div>
+            </div>
+            <!-- Pillar 3: Hiện thực hóa Tài chính -->
+            <div
+              class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm flex flex-col justify-between"
+            >
+              <div>
+                <div
+                  class="flex items-center justify-between pb-3 border-b border-slate-100"
+                >
+                  <div class="flex items-center gap-2.5">
+                    <div
+                      class="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center"
+                    >
+                      <span class="material-symbols-outlined text-[20px]"
+                        >payments</span
+                      >
+                    </div>
+                    <div>
+                      <h3 class="font-display font-bold text-slate-900 text-sm">
+                        Hiện Thực Hóa Tài Chính
+                      </h3>
+                      <span class="text-[11px] text-slate-400"
+                        >Giá Trị C-Suite</span
+                      >
+                    </div>
+                  </div>
+                  <span
+                    class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-semibold text-[11px] border border-emerald-200"
+                    >Vượt KH</span
+                  >
+                </div>
+                <div class="mt-4 flex flex-col gap-3.5">
+                  <div
+                    class="bg-slate-50 border border-slate-200/80 rounded-lg p-3 flex justify-between items-center"
+                  >
+                    <div>
+                      <span
+                        class="text-[10px] uppercase font-semibold text-slate-500"
+                        >Doanh Thu Chéo (Revenue)</span
+                      >
+                      <div
+                        class="text-lg font-bold font-mono text-emerald-600 mt-0.5"
+                      >
+                        680 Tỷ VND
+                      </div>
+                    </div>
+                    <span
+                      class="text-xs font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-1 rounded border border-emerald-200"
+                      >113.3% KH</span
+                    >
+                  </div>
+                  <div
+                    class="flex justify-between items-center py-2 border-b border-slate-100 text-xs"
+                  >
+                    <span class="text-slate-600"
+                      >Cộng Hưởng Chi Phí (Cost)</span
+                    >
+                    <div class="flex items-center gap-1.5">
+                      <span class="font-mono font-bold text-slate-900"
+                        >420 Tỷ</span
+                      >
+                      <span class="font-mono text-slate-500 text-[11px]"
+                        >/ 450 Tỷ (93.3%)</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="flex justify-between items-center py-2 border-b border-slate-100 text-xs"
+                  >
+                    <span class="text-slate-600">Tiết Giảm OPEX Chuỗi</span>
+                    <div class="flex items-center gap-1.5">
+                      <span class="font-mono font-bold text-emerald-600"
+                        >~14.8%</span
+                      >
+                      <span class="font-mono text-slate-400 text-[11px]"
+                        >P&amp;L Hợp Nhất</span
+                      >
+                    </div>
+                  </div>
+                  <div class="flex justify-between items-center text-xs">
+                    <span class="text-slate-600">EBITDA Hợp Nhất</span>
+                    <span class="font-mono font-bold text-slate-900"
+                      >Hòa vốn sớm 4 tháng</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400"
+              >
+                <span>Kiểm toán P&amp;L nội bộ</span>
+                <span class="text-emerald-600 font-medium">✓ Đã ghi nhận</span>
+              </div>
+            </div>
+          </div>
+          <!-- Central Analytics: Synergy Curve & Executive Insights -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <!-- Synergy Curve Chart (Clean Light 8 Columns) -->
+            <div
+              class="lg:col-span-8 bg-white border border-slate-200 rounded-xl p-6 shadow-sm flex flex-col justify-between"
+            >
+              <div>
+                <div
+                  class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4"
+                >
+                  <div>
+                    <h2 class="font-display font-bold text-slate-900 text-base">
+                      Đường Cong Hiện Thực Hóa Synergy
+                    </h2>
+                    <p class="text-xs text-slate-500">
+                      Mô hình dự phóng 18 tháng: Can thiệp chủ động vs Thung
+                      lũng suy giảm M&amp;A
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-3 text-xs">
+                    <div class="flex items-center gap-1.5">
+                      <span
+                        class="w-2.5 h-2.5 rounded-full bg-emerald-500"
+                      ></span>
+                      <span class="text-slate-700 font-medium"
+                        >Can Thiệp Chủ Động</span
+                      >
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                      <span class="w-2.5 h-2.5 rounded-full bg-rose-400"></span>
+                      <span class="text-slate-500">Không Can Thiệp</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Clean SVG Line Chart -->
+                <div
+                  class="w-full relative h-64 bg-slate-50 border border-slate-100 rounded-lg p-4 flex flex-col justify-end"
+                >
+                  <svg
+                    class="w-full h-full overflow-visible"
+                    preserveaspectratio="none"
+                    viewbox="0 0 760 220"
+                  >
+                    <defs>
+                      <lineargradient
+                        id="lightActiveGrad"
+                        x1="0%"
+                        x2="0%"
+                        y1="0%"
+                        y2="100%"
+                      >
+                        <stop
+                          offset="0%"
+                          stop-color="#10b981"
+                          stop-opacity="0.18"
+                        ></stop>
+                        <stop
+                          offset="100%"
+                          stop-color="#10b981"
+                          stop-opacity="0.0"
+                        ></stop>
+                      </lineargradient>
+                      <lineargradient
+                        id="lightCollapseGrad"
+                        x1="0%"
+                        x2="0%"
+                        y1="0%"
+                        y2="100%"
+                      >
+                        <stop
+                          offset="0%"
+                          stop-color="#f43f5e"
+                          stop-opacity="0.10"
+                        ></stop>
+                        <stop
+                          offset="100%"
+                          stop-color="#f43f5e"
+                          stop-opacity="0.0"
+                        ></stop>
+                      </lineargradient>
+                    </defs>
+                    <!-- Horizontal Grids -->
+                    <line
+                      stroke="#e2e8f0"
+                      stroke-dasharray="3 3"
+                      stroke-width="1"
+                      x1="0"
+                      x2="760"
+                      y1="40"
+                      y2="40"
+                    ></line>
+                    <line
+                      stroke="#e2e8f0"
+                      stroke-dasharray="3 3"
+                      stroke-width="1"
+                      x1="0"
+                      x2="760"
+                      y1="90"
+                      y2="90"
+                    ></line>
+                    <line
+                      stroke="#e2e8f0"
+                      stroke-dasharray="3 3"
+                      stroke-width="1"
+                      x1="0"
+                      x2="760"
+                      y1="140"
+                      y2="140"
+                    ></line>
+                    <line
+                      stroke="#e2e8f0"
+                      stroke-dasharray="3 3"
+                      stroke-width="1"
+                      x1="0"
+                      x2="760"
+                      y1="190"
+                      y2="190"
+                    ></line>
+                    <!-- Current Milestone Line (Day 90) -->
+                    <line
+                      stroke="#0284c7"
+                      stroke-dasharray="2 2"
+                      stroke-width="1.5"
+                      x1="280"
+                      x2="280"
+                      y1="15"
+                      y2="200"
+                    ></line>
+                    <rect
+                      fill="#0284c7"
+                      height="18"
+                      rx="3"
+                      width="86"
+                      x="237"
+                      y="10"
+                    ></rect>
+                    <text
+                      fill="#ffffff"
+                      font-family="JetBrains Mono"
+                      font-size="9"
+                      font-weight="600"
+                      text-anchor="middle"
+                      x="280"
+                      y="23"
+                    >
+                      HIỆN TẠI (D90)
+                    </text>
+                    <!-- Scenario B: Collapse Valley Curve (Red/Rose) -->
+                    <path
+                      d="M 0 120 C 80 135, 140 185, 280 180 C 420 175, 560 160, 760 145 L 760 210 L 0 210 Z"
+                      fill="url(#lightCollapseGrad)"
+                    ></path>
+                    <path
+                      d="M 0 120 C 80 135, 140 185, 280 180 C 420 175, 560 160, 760 145"
+                      fill="none"
+                      stroke="#fb7185"
+                      stroke-dasharray="4 3"
+                      stroke-width="2"
+                    ></path>
+                    <!-- Scenario A: Intervention Trajectory (Emerald) -->
+                    <path
+                      d="M 0 120 C 70 130, 150 145, 220 130 C 280 100, 420 48, 760 24 L 760 210 L 0 210 Z"
+                      fill="url(#lightActiveGrad)"
+                    ></path>
+                    <path
+                      d="M 0 120 C 70 130, 150 145, 220 130 C 280 100, 420 48, 760 24"
+                      fill="none"
+                      stroke="#059669"
+                      stroke-width="2.5"
+                    ></path>
+                    <!-- Key Markers -->
+                    <circle
+                      cx="280"
+                      cy="100"
+                      fill="#059669"
+                      r="4.5"
+                      stroke="#ffffff"
+                      stroke-width="2"
+                    ></circle>
+                    <circle
+                      cx="750"
+                      cy="24"
+                      fill="#0284c7"
+                      r="5"
+                      stroke="#ffffff"
+                      stroke-width="2"
+                    ></circle>
+                    <!-- Labels -->
+                    <text
+                      fill="#e11d48"
+                      font-family="Inter"
+                      font-size="10"
+                      font-weight="500"
+                      x="210"
+                      y="195"
+                    >
+                      Thung lũng xung đột (-42%)
+                    </text>
+                    <text
+                      fill="#059669"
+                      font-family="JetBrains Mono"
+                      font-size="11"
+                      font-weight="600"
+                      x="295"
+                      y="96"
+                    >
+                      +1.100 Tỷ VND
+                    </text>
+                    <text
+                      fill="#0284c7"
+                      font-family="JetBrains Mono"
+                      font-size="11"
+                      font-weight="600"
+                      x="650"
+                      y="20"
+                    >
+                      Đích: 1.850 Tỷ VND
+                    </text>
+                  </svg>
+                  <div
+                    class="w-full flex justify-between items-center pt-2 border-t border-slate-200 text-slate-500 font-mono text-[10px]"
+                  >
+                    <span>Day 0</span>
+                    <span>Day 30</span>
+                    <span class="text-sky-700 font-bold"
+                      >Day 90 (Hiện Tại)</span
+                    >
+                    <span>Tháng 6</span>
+                    <span>Tháng 12</span>
+                    <span>Tháng 18</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Condensed Summary Metrics -->
+              <div
+                class="mt-4 pt-3 border-t border-slate-100 grid grid-cols-3 gap-3 text-xs"
+              >
+                <div>
+                  <span class="text-slate-500 block text-[11px]"
+                    >Giá Trị Bảo Vệ</span
+                  >
+                  <span class="font-mono font-bold text-emerald-600 text-sm"
+                    >+720 Tỷ VND</span
+                  >
+                </div>
+                <div>
+                  <span class="text-slate-500 block text-[11px]"
+                    >Tốc Độ Hiện Thực</span
+                  >
+                  <span class="font-mono font-bold text-sky-700 text-sm"
+                    >1.38x Chuẩn VN</span
+                  >
+                </div>
+                <div>
+                  <span class="text-slate-500 block text-[11px]"
+                    >Tỷ Lệ Bền Vững</span
+                  >
+                  <span class="font-mono font-bold text-slate-800 text-sm"
+                    >94.2%</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Executive Insights (Clean Light 4 Columns) -->
+            <div
+              class="lg:col-span-4 bg-white border border-slate-200 rounded-xl p-6 shadow-sm flex flex-col justify-between"
+            >
+              <div class="flex flex-col gap-3">
+                <div
+                  class="flex items-center justify-between pb-2 border-b border-slate-100"
+                >
+                  <h3
+                    class="font-display font-bold text-slate-900 text-sm uppercase tracking-wide"
+                  >
+                    Nhận Định C-Suite
+                  </h3>
+                  <span class="text-sky-600 material-symbols-outlined text-lg"
+                    >verified</span
+                  >
+                </div>
+                <div class="flex flex-col gap-2.5">
+                  <div
+                    class="p-3 rounded-lg bg-slate-50 border border-slate-200/70"
+                  >
+                    <div
+                      class="flex items-center gap-1.5 text-emerald-700 text-xs font-semibold"
+                    >
+                      <span class="material-symbols-outlined text-sm"
+                        >check_circle</span
+                      >
+                      Can Thiệp RACI Hiệu Quả
+                    </div>
+                    <p class="text-xs text-slate-600 mt-1 leading-normal">
+                      Tái lập ma trận thẩm quyền tuần thứ 6 đã dập tắt điểm
+                      nghẽn phân phối giữa nhà máy Masan và kho VinCommerce.
+                    </p>
+                  </div>
+                  <div
+                    class="p-3 rounded-lg bg-slate-50 border border-slate-200/70"
+                  >
+                    <div
+                      class="flex items-center gap-1.5 text-sky-700 text-xs font-semibold"
+                    >
+                      <span class="material-symbols-outlined text-sm"
+                        >trending_up</span
+                      >
+                      Doanh Thu Bán Chéo
+                    </div>
+                    <p class="text-xs text-slate-600 mt-1 leading-normal">
+                      94% FMCG cốt lõi phủ rộng 3.000+ điểm WinMart+ giúp tối ưu
+                      luân chuyển hàng tồn kho và cải thiện thanh khoản.
+                    </p>
+                  </div>
+                  <div
+                    class="p-3 rounded-lg bg-amber-50/60 border border-amber-200/70"
+                  >
+                    <div
+                      class="flex items-center gap-1.5 text-amber-800 text-xs font-semibold"
+                    >
+                      <span class="material-symbols-outlined text-sm"
+                        >warning</span
+                      >
+                      Vùng Cần Theo Dõi
+                    </div>
+                    <p class="text-xs text-amber-900/80 mt-1 leading-normal">
+                      Độ lệch văn hóa tại khối Cửa hàng trưởng miền Trung còn âm
+                      12%. Duy trì cơ chế trao đổi trực tiếp thêm 60 ngày.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Author Sign-off Box -->
+              <div
+                class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between bg-slate-50/80 p-3 rounded-lg border border-slate-200/60"
+              >
+                <div class="flex items-center gap-2.5">
+                  <div
+                    class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center font-mono font-bold text-xs text-slate-700"
+                  >
+                    IMO
+                  </div>
+                  <div>
+                    <div class="text-xs font-semibold text-slate-900">
+                      Trần Nam Quân
+                    </div>
+                    <div class="text-[10px] text-slate-500 uppercase font-mono">
+                      Giám Đốc Tích Hợp
+                    </div>
+                  </div>
+                </div>
+                <span
+                  class="text-emerald-700 font-mono text-[11px] font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200"
+                  >VERIFIED</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- 30-Day Tactical Checklist (Streamlined Light Table) -->
+          <div
+            class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm flex flex-col gap-4"
+          >
+            <div
+              class="flex flex-col sm:flex-row sm:items-center justify-between gap-3"
+            >
+              <div>
+                <h2 class="font-display font-bold text-slate-900 text-base">
+                  Checklist Hành Động Điều Hành 30 Ngày Tới
+                </h2>
+                <p class="text-xs text-slate-500">
+                  Các hạng mục ưu tiên trọng điểm của Ban điều phối IMO
+                </p>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-xs text-slate-600 font-medium"
+                  >Hoàn tất:
+                  <strong class="text-emerald-600 font-mono">4/7</strong></span
+                >
+                <div class="w-24 bg-slate-200 h-2 rounded-full overflow-hidden">
+                  <div
+                    class="bg-emerald-500 h-full rounded-full"
+                    style="width: 57.1%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <!-- Simplified Table -->
+            <div class="overflow-x-auto">
+              <table class="w-full text-left border-collapse text-xs">
+                <thead>
+                  <tr
+                    class="bg-slate-50 text-slate-500 font-semibold border-y border-slate-200"
+                  >
+                    <th class="py-2.5 px-3">Trạng Thái</th>
+                    <th class="py-2.5 px-3">Hành Động Trọng Yếu</th>
+                    <th class="py-2.5 px-3">Khối Phụ Trách</th>
+                    <th class="py-2.5 px-3">Mục Tiêu Định Lượng</th>
+                    <th class="py-2.5 px-3">Thời Hạn</th>
+                    <th class="py-2.5 px-3 text-right">Ưu Tiên</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 text-slate-700">
+                  <!-- Row 1 -->
+                  <tr class="hover:bg-slate-50/70 transition-colors">
+                    <td class="py-2.5 px-3">
+                      <span
+                        class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 font-medium text-[11px]"
+                      >
+                        <span
+                          class="w-1.5 h-1.5 rounded-full bg-emerald-500"
+                        ></span>
+                        Đã Triển Khai
+                      </span>
+                    </td>
+                    <td class="py-2.5 px-3 font-medium text-slate-900">
+                      Sáp nhập hệ sinh thái khách hàng thân thiết Masan × WinID
+                    </td>
+                    <td class="py-2.5 px-3 text-slate-600">
+                      Marketing &amp; Data
+                    </td>
+                    <td
+                      class="py-2.5 px-3 font-mono font-semibold text-emerald-600"
+                    >
+                      +1.8M Active Users
+                    </td>
+                    <td class="py-2.5 px-3 font-mono text-slate-500">
+                      Day 100
+                    </td>
+                    <td class="py-2.5 px-3 text-right">
+                      <span
+                        class="px-2 py-0.5 rounded bg-rose-50 text-rose-700 font-mono text-[10px] font-bold"
+                        >CRITICAL</span
+                      >
+                    </td>
+                  </tr>
+                  <!-- Row 2 -->
+                  <tr class="hover:bg-slate-50/70 transition-colors">
+                    <td class="py-2.5 px-3">
+                      <span
+                        class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-sky-50 text-sky-700 font-medium text-[11px]"
+                      >
+                        <span
+                          class="w-1.5 h-1.5 rounded-full bg-sky-500 animate-pulse"
+                        ></span>
+                        Đang Tiến Hành
+                      </span>
+                    </td>
+                    <td class="py-2.5 px-3 font-medium text-slate-900">
+                      Gói đãi ngộ giữ chân (Retention Bonuses) cho 45 QL Vùng
+                      WinCommerce
+                    </td>
+                    <td class="py-2.5 px-3 text-slate-600">
+                      Khối Nhân Sự (CHRO)
+                    </td>
+                    <td
+                      class="py-2.5 px-3 font-mono font-semibold text-sky-600"
+                    >
+                      Tỷ lệ gắn kết &gt;90%
+                    </td>
+                    <td class="py-2.5 px-3 font-mono text-slate-500">
+                      Day 105
+                    </td>
+                    <td class="py-2.5 px-3 text-right">
+                      <span
+                        class="px-2 py-0.5 rounded bg-sky-50 text-sky-700 font-mono text-[10px] font-bold"
+                        >HIGH</span
+                      >
+                    </td>
+                  </tr>
+                  <!-- Row 3 -->
+                  <tr class="hover:bg-slate-50/70 transition-colors">
+                    <td class="py-2.5 px-3">
+                      <span
+                        class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-sky-50 text-sky-700 font-medium text-[11px]"
+                      >
+                        <span
+                          class="w-1.5 h-1.5 rounded-full bg-sky-500 animate-pulse"
+                        ></span>
+                        Đang Tiến Hành
+                      </span>
+                    </td>
+                    <td class="py-2.5 px-3 font-medium text-slate-900">
+                      Tự động hóa kiểm đếm chéo nhà cung ứng &amp; kho trung
+                      chuyển
+                    </td>
+                    <td class="py-2.5 px-3 text-slate-600">Chuỗi Cung Ứng</td>
+                    <td
+                      class="py-2.5 px-3 font-mono font-semibold text-emerald-600"
+                    >
+                      Tồn kho 22 → 16 ngày
+                    </td>
+                    <td class="py-2.5 px-3 font-mono text-slate-500">
+                      Day 112
+                    </td>
+                    <td class="py-2.5 px-3 text-right">
+                      <span
+                        class="px-2 py-0.5 rounded bg-sky-50 text-sky-700 font-mono text-[10px] font-bold"
+                        >HIGH</span
+                      >
+                    </td>
+                  </tr>
+                  <!-- Row 4 -->
+                  <tr class="hover:bg-slate-50/70 transition-colors">
+                    <td class="py-2.5 px-3">
+                      <span
+                        class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-slate-100 text-slate-600 font-medium text-[11px]"
+                      >
+                        <span
+                          class="w-1.5 h-1.5 rounded-full bg-slate-400"
+                        ></span>
+                        Lập Kế Hoạch
+                      </span>
+                    </td>
+                    <td class="py-2.5 px-3 font-medium text-slate-900">
+                      Hội nghị Thống Nhất Văn Hóa Doanh Nghiệp (Town Hall) Q3
+                    </td>
+                    <td class="py-2.5 px-3 text-slate-600">
+                      Văn Phòng Văn Hóa
+                    </td>
+                    <td class="py-2.5 px-3 font-mono text-slate-600">
+                      Trust Score: 74 → 85 pts
+                    </td>
+                    <td class="py-2.5 px-3 font-mono text-slate-500">
+                      Day 120
+                    </td>
+                    <td class="py-2.5 px-3 text-right">
+                      <span
+                        class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-mono text-[10px] font-semibold"
+                        >MEDIUM</span
+                      >
+                    </td>
+                  </tr>
+                  <!-- Row 5 -->
+                  <tr class="hover:bg-slate-50/70 transition-colors">
+                    <td class="py-2.5 px-3">
+                      <span
+                        class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 font-medium text-[11px]"
+                      >
+                        <span
+                          class="w-1.5 h-1.5 rounded-full bg-emerald-500"
+                        ></span>
+                        Đã Triển Khai
+                      </span>
+                    </td>
+                    <td class="py-2.5 px-3 font-medium text-slate-900">
+                      Thẩm định báo cáo tài chính kiểm toán hợp nhất đợt 1
+                    </td>
+                    <td class="py-2.5 px-3 text-slate-600">
+                      Tài Chính (CFO Team)
+                    </td>
+                    <td
+                      class="py-2.5 px-3 font-mono font-semibold text-emerald-600"
+                    >
+                      1.100 tỷ VND Synergy
+                    </td>
+                    <td class="py-2.5 px-3 font-mono text-slate-500">Day 95</td>
+                    <td class="py-2.5 px-3 text-right">
+                      <span
+                        class="px-2 py-0.5 rounded bg-rose-50 text-rose-700 font-mono text-[10px] font-bold"
+                        >CRITICAL</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Bottom Summary Actions -->
+            <div
+              class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-3 border-t border-slate-100"
+            >
+              <span class="text-xs text-slate-500 flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-slate-400 text-base"
+                  >sync</span
+                >
+                Đồng bộ tự động theo thời gian thực với hệ thống OKR điều hành.
+              </span>
+              <div class="flex items-center gap-2">
+                <button
+                  class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-medium transition-colors"
+                  type="button"
+                >
+                  Phân Công Thêm
+                </button>
+                <button
+                  class="px-3.5 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold transition-colors"
+                  type="button"
+                >
+                  Cập Nhật Tiến Độ
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
