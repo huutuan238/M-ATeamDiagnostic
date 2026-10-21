@@ -39,7 +39,7 @@ const S = [
         "Ép VinCommerce áp dụng 100% quy trình phê duyệt của Masan ngay lập tức.",
         3,
         "D",
-        "Authoritative: cứng nhắc, dễ kích hoạt kháng cự ngầm.",
+        "Authoritative: cứng nhắc, dễ kích hoạt kháng cự ngầm.cái chỗ nhận xét câu trả lời này có thể bắt n nhận xét sâu hơn dc k thùy. xong rồi chỉ ra câu trl phù hợp nhất nữa",
       ],
     ],
   },
