@@ -1,331 +1,331 @@
 const S = [
   {
-    "ph": "Giai đoạn 1: Khởi tạo bối cảnh",
+    "ph": "Giai đoạn 1: Tiếp nhận & Tái cấu trúc",
+    "wk": "Tháng 12/2019",
+    "k": "Xác định ưu tiên chiến lược giữa tái cấu trúc chi phí và giữ vững quy mô",
+    "ctx": "Masan chính thức tiếp quản VinCommerce (chuỗi VinMart/VinMart+) từ Vingroup trong bối cảnh chuỗi này đang chịu khoản lỗ EBITDA hơn 100 triệu USD/năm và quy mô gần 3.000 điểm bán hoạt động phân tán.",
+    "q": "Là Tổng Giám đốc phụ trách tái cấu trúc VinCommerce, bạn sẽ đề ra chiến lược hành động ưu tiên nào trong 100 ngày đầu tiên?",
+    "o": [
+      [
+        "Giữ nguyên toàn bộ 3.000 cửa hàng và tiếp tục mở rộng ồ ạt để áp đảo đối thủ cạnh tranh về thị phần.",
+        1,
+        "D",
+        "Aggressive Expansion (Mở rộng mù quáng): Việc duy trì và mở rộng áp đảo khi mô hình vận hành chưa tối ưu sẽ khiến khoản lỗ EBITDA hơn 100 triệu USD/năm bị nhân lên nhanh chóng, gây áp lực bào mòn dòng tiền của tập đoàn mẹ Masan.\n\n=> GỢI Ý: Trong giai đoạn 'Forming' tái cấu trúc, việc ưu tiên cắt giảm chảy máu tài chính quan trọng hơn mở rộng quy mô. Hãy chọn phương án 'Rà soát toàn bộ mạng lưới, kiên quyết đóng cửa hơn 400 cửa hàng hoạt động kém hiệu quả...' để đưa EBITDA về mức hòa vốn trước."
+      ],
+      [
+        "Rà soát toàn bộ mạng lưới, kiên quyết đóng cửa hơn 400 cửa hàng hoạt động kém hiệu quả và tái thiết kế mô hình cửa hàng chuẩn.",
+        4,
+        "P",
+        "Strategic Pruning (Tái cấu trúc quyết đoán): Sự kết hợp xuất sắc giữa phân tích định lượng (tối ưu hóa chỉ số EBITDA trên từng điểm bán) và trực giác kinh doanh bán lẻ. Chấp nhận thu hẹp quy mô ngắn hạn để loại bỏ gánh nặng tài chính, tập trung nguồn lực thiết kế mô hình chuẩn trước khi nhân rộng. => ĐÂY LÀ ĐÁP ÁN PHÙ HỢP NHẤT."
+      ],
+      [
+        "Bán bớt 50% cổ phần VinCommerce cho nhà đầu tư nước ngoài để chia sẻ rủi ro tài chính ngay lập tức.",
+        2,
+        "S",
+        "Risk Offloading (Né tránh rủi ro): Vội vã bán cổ phần khi doanh nghiệp đang lỗ nặng và chưa được tối ưu hóa sẽ khiến Masan bị mất vị thế đàm phán, bị định giá thấp và làm mất đi cơ hội sở hữu nền tảng bán lẻ - tiêu dùng hàng đầu Việt Nam.\n\n=> GỢI Ý: Hãy ưu tiên phương án 'Rà soát toàn bộ mạng lưới, kiên quyết đóng cửa hơn 400 cửa hàng...' để tự nâng cao nội lực và giá trị doanh nghiệp trước khi tìm kiếm sự hợp tác vốn từ bên ngoài."
+      ],
+      [
+        "Cắt giảm 50% lương và phúc lợi của toàn bộ nhân viên VinCommerce để hạ chi phí vận hành nhanh nhất.",
+        3,
+        "E",
+        "Cost Squeezing (Cắt giảm tiêu cực): Áp đặt cắt giảm thu nhập trực tiếp lên nhân viên tuyến đầu sẽ gây xáo trộn tâm lý, kích hoạt làn sóng nghỉ việc hàng loạt, làm suy giảm chất lượng dịch vụ và phá hủy trải nghiệm khách hàng tại điểm bán.\n\n=> GỢI Ý: Cắt giảm chi phí cần tập trung vào việc tái cấu trúc các điểm bán lỗ và khâu vận hành lãng phí. Hãy chọn phương án 'Rà soát toàn bộ mạng lưới, kiên quyết đóng cửa hơn 400 cửa hàng...'."
+      ]
+    ]
+  },
+  {
+    "ph": "Giai đoạn 2: Định vị thương hiệu",
+    "wk": "Năm 2021 - 2022",
+    "k": "Tái định vị thương hiệu và xây dựng mô hình điểm bán tích hợp (Point of Life)",
+    "ctx": "Sau khi đưa EBITDA về mức hòa vốn, Masan muốn chuyển đổi VinMart/VinMart+ thành WinMart/WinMart+ và thử nghiệm mô hình cửa hàng đa tiện ích WIN (tích hợp WinMart+, Phúc Long, Phano Pharmacy, Techcombank).",
+    "q": "Bạn đánh giá và triển khai chiến lược chuyển đổi thương hiệu cùng mô hình tích hợp này như thế nào để tối ưu hiệu quả kinh doanh?",
+    "o": [
+      [
+        "Chỉ đổi tên thương hiệu VinMart thành WinMart để tiết kiệm chi phí, không thêm các dịch vụ khác.",
+        2,
+        "S",
+        "Minimalist Approach (Thay đổi bề nổi): Đổi tên đơn thuần chỉ thay đổi nhận diện thương hiệu chứ không giải quyết được bài toán gia tăng giá trị giỏ hàng, tần suất mua sắm hay doanh thu trên mỗi m2 sàn bán lẻ.\n\n=> GỢI Ý: Cần tích hợp thêm các dịch vụ nhu yếu phẩm và F&B có tần suất sử dụng cao. Hãy chọn phương án 'Thử nghiệm mô hình tích hợp WIN tại các vị trí đắc địa, đo lường doanh thu/m2...' để đánh giá tính khả thi trước khi nhân rộng."
+      ],
+      [
+        "Tích hợp ngay lập tức tất cả các dịch vụ vào 100% cửa hàng trong toàn hệ thống mà không cần thử nghiệm.",
+        1,
+        "D",
+        "Over-hasty Execution (Nóng vội quy mô): Áp đặt mô hình mới trên toàn hệ thống gần 3.000 điểm bán khi chưa chuẩn hóa quy trình vận hành và kiểm chứng hành vi người tiêu dùng sẽ gây rủi ro đứt gãy chuỗi cung ứng và lãng phí vốn đầu tư.\n\n=> GỢI Ý: Bán lẻ đòi hỏi sự thử nghiệm và tinh chỉnh liên tục. Bạn nên chọn phương án 'Thử nghiệm mô hình tích hợp WIN tại các vị trí đắc địa, đo lường doanh thu/m2...' để giảm thiểu rủi ro."
+      ],
+      [
+        "Thử nghiệm mô hình tích hợp WIN tại các vị trí đắc địa, đo lường doanh thu/m2 và mức độ hài lòng của khách hàng trước khi nhân rộng toàn quốc.",
+        4,
+        "P",
+        "Agile & Scalable Integration (Tích hợp linh hoạt & có kiểm chứng): Chiến lược tiếp cận hiện đại dung hòa giữa đo lường chỉ số định lượng (doanh thu/m2) và tầm nhìn hệ sinh thái 'Point of Life'. Việc thử nghiệm quy mô nhỏ giúp kiểm chứng tỷ lệ thành công trước khi đầu tư lớn. => ĐÂY LÀ ĐÁP ÁN PHÙ HỢP NHẤT."
+      ],
+      [
+        "Loại bỏ hoàn toàn mảng bán lẻ nhu yếu phẩm để biến toàn bộ cửa hàng thành chuỗi cà phê Phúc Long.",
+        3,
+        "E",
+        "Radical Shift (Chuyển hướng cực đoan): Tự tay phá hủy mảng bán lẻ cốt lõi sẽ làm mất đi lượng lưu lượng khách hàng ghé thăm hàng ngày (foot traffic) vô cùng lớn - vốn là nền tảng sống còn của toàn bộ hệ sinh thái Masan.\n\n=> GỢI Ý: Mô hình thành công phải kết hợp được cả tiêu dùng nhu yếu phẩm và F&B. Hãy ưu tiên phương án 'Thử nghiệm mô hình tích hợp WIN tại các vị trí đắc địa...'."
+      ]
+    ]
+  },
+  {
+    "ph": "Giai đoạn 3: Tích hợp Chuỗi cung ứng",
+    "wk": "Năm 2022",
+    "k": "Tối ưu hóa logistics nội bộ thông qua công ty chuyên trách (Supra)",
+    "ctx": "Chi phí logistics chiếm tỷ trọng cao trong giá thành hàng hóa bán lẻ tại Việt Nam. Masan thành lập công ty Supra để tự chủ và chuyên môn hóa khâu logistics cho chuỗi WinCommerce.",
+    "q": "Để Supra tối ưu hóa chi phí và đảm bảo tỷ lệ có hàng (fill rate) cao nhất tại cửa hàng, bạn đề xuất giải pháp quản trị nào?",
+    "o": [
+      [
+        "Áp dụng trí tuệ nhân tạo (AI) và Machine Learning để dự báo nhu cầu tự động, kết hợp hệ thống kho trung tâm (DC) để tối ưu luồng giao hàng.",
+        4,
+        "S",
+        "Tech-driven Logistics (Tối ưu hóa công nghệ): Tận dụng thuật toán dữ liệu lớn giúp tự động hóa khâu đặt hàng, giảm thiểu chi phí logistics trên mỗi sản phẩm, nâng cao tỷ lệ sẵn có của hàng hóa trên kệ và tối ưu hóa hàng tồn kho. => ĐÂY LÀ ĐÁP ÁN PHÙ HỢP NHẤT."
+      ],
+      [
+        "Yêu cầu các nhà cung cấp tự vận chuyển trực tiếp hàng hóa đến từng cửa hàng lẻ để WinCommerce không phải quản lý kho.",
+        2,
+        "D",
+        "Cost Shifting (Đẩy chi phí cho đối tác): Việc đẩy gánh nặng giao hàng về từng điểm bán lẻ cho nhà cung cấp nhỏ lẻ sẽ làm tăng chi phí toàn chuỗi, gây ách tắc điểm bán và làm giảm tỷ lệ có hàng nghiêm trọng.\n\n=> GỢI Ý: Lợi thế quy mô của bán lẻ nằm ở khâu tập trung hóa kho vận. Bạn nên chọn phương án 'Áp dụng trí tuệ nhân tạo (AI) và Machine Learning để dự báo nhu cầu tự động, kết hợp hệ thống kho trung tâm (DC)...'."
+      ],
+      [
+        "Thuê 100% đối tác logistics bên ngoài đảm nhận toàn bộ khâu kho vận để giảm chi phí đầu tư ban đầu.",
+        3,
+        "E",
+        "Outsourcing Dependency (Phụ thuộc bên ngoài): Trao toàn bộ khâu logistics cho bên thứ ba sẽ khiến chuỗi bán lẻ mất quyền kiểm soát dữ liệu thời gian thực, kém linh hoạt khi có biến động nhu cầu và khó tối ưu hóa chi phí dài hạn.\n\n=> GỢI Ý: Logistics là năng lực cốt lõi trong bán lẻ nhu yếu phẩm. Hãy ưu tiên đáp án 'Áp dụng trí tuệ nhân tạo (AI) và Machine Learning để dự báo nhu cầu tự động...'."
+      ],
+      [
+        "Dừng mở rộng kho bãi và giảm tần suất giao hàng xuống 1 tuần/lần để tiết kiệm chi phí vận chuyển.",
+        1,
+        "P",
+        "Short-sighted Saving (Tiết kiệm ngắn hạn): Giảm tần suất giao hàng trong ngành bán lẻ thực phẩm tươi sống/nhu yếu phẩm sẽ làm đứt gãy nguồn cung trên kệ, khiến hàng hóa bị giảm tươi ngon và đẩy khách hàng sang đối thủ.\n\n=> GỢI Ý: Tiết kiệm chi phí kho vận phải đi kèm nâng cao chất lượng phục vụ. Hãy chọn phương án 'Áp dụng trí tuệ nhân tạo (AI)...'."
+      ]
+    ]
+  },
+  {
+    "ph": "Giai đoạn 4: Văn hóa & Nhân sự",
+    "wk": "Năm 2020 - 2021",
+    "k": "Xử lý xung đột văn hóa doanh nghiệp (Sản xuất FMCG vs Bán lẻ dịch vụ)",
+    "ctx": "Sau M&A, đội ngũ quản lý từ Masan Consumer (văn hóa sản xuất FMCG, chú trọng chỉ tiêu & sản phẩm) bắt đầu tiếp quản WinCommerce (văn hóa dịch vụ bán lẻ, chú trọng trải nghiệm khách hàng & vận hành linh hoạt).",
+    "q": "Là Giám đốc Nhân sự Tập đoàn, bạn sẽ giải quyết sự khác biệt văn hóa này như thế nào để tránh đứt gãy bộ máy?",
+    "o": [
+      [
+        "Thay thế toàn bộ nhân sự bán lẻ cũ của VinCommerce bằng cán bộ từ Masan Consumer để đảm bảo tính trung thành.",
+        2,
+        "D",
+        "Culture Imposition (Áp đặt văn hóa): Tư duy thâu tóm áp đặt văn hóa sản xuất vào ngành dịch vụ bán lẻ sẽ gây bế tắc vận hành, kích hoạt làn sóng nghỉ việc của nhóm nhân sự am hiểu thị trường bán lẻ bản địa.\n\n=> GỢI Ý: Cần tôn trọng sự chuyên môn hóa của từng mảng. Bạn nên chọn 'Xây dựng văn hóa Chủ động & Thấu cảm, thành lập các đội nhóm liên chức năng...' để gắn kết hai bên."
+      ],
+      [
+        "Để hai bộ phận hoạt động độc lập hoàn toàn, không can thiệp hay kết nối để tránh tranh cãi.",
+        1,
+        "P",
+        "Silo Creation (Tạo rào cản nội bộ): Việc duy trì hai 'đế chế' riêng biệt sẽ làm triệt tiêu hoàn toàn mục tiêu của M&A là tạo ra giá trị cộng hưởng (Synergy) giữa mảng sản xuất FMCG và kênh phân phối bán lẻ.\n\n=> GỢI Ý: Cần có cầu nối dung hòa hai đội ngũ. Hãy ưu tiên phương án 'Xây dựng văn hóa Chủ động & Thấu cảm, thành lập các đội nhóm liên chức năng...'."
+      ],
+      [
+        "Xây dựng văn hóa 'Chủ động & Thấu cảm', thành lập các đội nhóm liên chức năng (Cross-functional teams) và thiết lập KPI chung dựa trên sự hài lòng của người tiêu dùng cuối cùng.",
+        4,
+        "S",
+        "Cultural Harmony & Alignment (Dung hòa & Đồng định hướng): Giải pháp dung hòa xuất sắc kết hợp năng lực quản trị hiệu suất của Masan với tư duy phụng sự khách hàng của WinCommerce. Thiết lập bộ KPI chung giúp định hướng cả hai về mục tiêu phụng sự người tiêu dùng. => ĐÂY LÀ ĐÁP ÁN PHÙ HỢP NHẤT."
+      ],
+      [
+        "Mời chuyên gia tư vấn nước ngoài vào quản lý trực tiếp toàn bộ các cửa hàng thay cho cả hai đội ngũ.",
+        3,
+        "E",
+        "External Reliance (Phụ thuộc bên ngoài): Giải pháp tốn kém chi phí nhưng không giải quyết được mốc xung đột nội bộ, đồng thời thiếu đi sự am hiểu sâu sắc về thói quen tiêu dùng của người Việt.\n\n=> GỢI Ý: Nên tập trung vào việc kết nối nội lực hai bên. Hãy chọn phương án 'Xây dựng văn hóa Chủ động & Thấu cảm, thành lập các đội nhóm liên chức năng...'."
+      ]
+    ]
+  },
+  {
+    "ph": "Giai đoạn 5: Hiện thực hóa Synergy",
+    "wk": "Năm 2023 - 2026",
+    "k": "Chuyển hóa dữ liệu người dùng thành giá trị thương mại (Membership & Fintech)",
+    "ctx": "WinCommerce sở hữu chương trình Hội viên WiN với hàng triệu thành viên. Masan muốn khai thác nguồn dữ liệu này để tăng tần suất mua sắm và kết nối với các dịch vụ tài chính của Techcombank.",
+    "q": "Bạn đề xuất chiến lược nào để khai thác tối đa giá trị cộng hưởng từ chương trình Hội viên WiN?",
+    "o": [
+      [
+        "Bán dữ liệu hội viên cho các công ty quảng cáo bên ngoài để thu về lợi nhuận nhanh nhất.",
+        1,
+        "D",
+        "Privacy Violation (Vi phạm rủi ro pháp lý): Xâm phạm riêng tư khách hàng, phá hủy thương hiệu và vi phạm nghiêm trọng các quy định pháp luật về bảo vệ dữ liệu cá nhân.\n\n=> GỢI Ý: Dữ liệu người dùng là tài sản cốt lõi dùng để nâng cao trải nghiệm khách hàng nội bộ. Hãy chọn phương án 'Cá nhân hóa ưu đãi dựa trên phân tích dữ liệu tiêu dùng, kết hợp các giải pháp thanh toán/tín dụng phi ngân hàng...'."
+      ],
+      [
+        "Cá nhân hóa ưu đãi dựa trên phân tích dữ liệu tiêu dùng, kết hợp các giải pháp thanh toán/tín dụng phi ngân hàng của Techcombank để gia tăng giá trị giỏ hàng.",
+        4,
+        "P",
+        "Data-driven Ecosystem Synergy (Cộng hưởng hệ sinh thái dựa trên dữ liệu): Tận dụng sức mạnh dữ liệu lớn để thấu hiểu khách hàng, mang lại lợi ích thiết thực cho người tiêu dùng và giảm chi phí thu hút khách hàng (CAC) cho cả Masan và Techcombank. => ĐÂY LÀ ĐÁP ÁN PHÙ HỢP NHẤT."
+      ],
+      [
+        "Thu phí tham gia hội viên hàng tháng đối với tất cả khách hàng mua sắm tại WinMart.",
+        2,
+        "S",
+        "Barrier Creation (Tạo rào cản khách hàng): Việc thu phí trong mảng bán lẻ nhu yếu phẩm sẽ tạo ra tâm lý bị cản trở, đẩy người tiêu dùng chuyển sang các chuỗi siêu thị/chợ truyền thống đối thủ.\n\n=> GỢI Ý: Mục tiêu chương trình là giữ chân và tăng tần suất mua sắm. Bạn nên ưu tiên đáp án 'Cá nhân hóa ưu đãi dựa trên phân tích dữ liệu tiêu dùng, kết hợp các giải pháp thanh toán/tín dụng phi ngân hàng...'."
+      ],
+      [
+        "Giữ nguyên chương trình tích điểm truyền thống, không kết nối dữ liệu với các công ty thành viên khác.",
+        3,
+        "E",
+        "Passivity (Bảo thủ, thụ động): Phớt lờ cơ hội chuyển hóa dữ liệu lớn (Big Data) thành lợi thế cạnh tranh, làm thất thoát tiềm năng cộng hưởng của toàn hệ sinh thái tiêu dùng - tài chính.\n\n=> GỢI Ý: Hãy tận dụng hệ sinh thái tích hợp bằng cách chọn phương án 'Cá nhân hóa ưu đãi dựa trên phân tích dữ liệu tiêu dùng, kết hợp các giải pháp thanh toán/tín dụng phi ngân hàng...'."
+      ]
+    ]
+  },
+  {
+    "ph": "Giai đoạn 6: Quản trị danh mục sản phẩm (Category Management)",
+    "wk": "Năm 2020 - 2021",
+    "k": "Cân bằng giữa thương hiệu riêng (Masan) và hàng hóa của các nhà cung cấp đối thủ",
+    "ctx": "Khi Masan (nhà sản xuất FMCG lớn) sở hữu WinCommerce (chuỗi bán lẻ lớn), các nhà cung cấp FMCG đối thủ lo ngại hàng hóa của họ bị chèn ép hoặc dành vị trí trưng bày xấu tại WinMart/WinMart+.",
+    "q": "Với vai trò Giám đốc Thu mua (Merchandising Director) của WinCommerce, bạn giải quyết bài toán mâu thuẫn lợi ích này như thế nào?",
+    "o": [
+      [
+        "Dành 100% diện tích trưng bày đẹp nhất cho các sản phẩm của Masan Consumer và loại bỏ bớt sản phẩm đối thủ.",
+        1,
+        "D",
+        "Monopolistic Bias (Lợi ích cục bộ ngắn hạn): Biến kênh bán lẻ thành nơi tiêu thụ nội bộ sẽ làm nghèo nàn lựa chọn của khách hàng, đẩy họ sang chuỗi bán lẻ khác và làm giảm doanh thu chung của WinCommerce.\n\n=> GỢI Ý: Bán lẻ phải lấy trải nghiệm người tiêu dùng làm trung tâm. Bạn nên chọn 'Áp dụng chính sách quản trị danh mục sản phẩm minh bạch dựa trên sức mua thực tế của khách hàng...'."
+      ],
+      [
+        "Ưu tiên trưng bày sản phẩm đối thủ và hạn chế bán hàng của Masan để chứng minh sự minh bạch với thị trường.",
+        2,
+        "S",
+        "Over-compensation (Tự gây thiệt hại): Hy sinh lợi thế cộng hưởng từ mảng sản xuất của tập đoàn mẹ một cách khiên cưỡng, không dựa trên hiệu quả thương mại thực tế.\n\n=> GỢI Ý: Cần có tiêu chí công bằng dựa trên dữ liệu. Hãy chọn 'Áp dụng chính sách quản trị danh mục sản phẩm minh bạch dựa trên sức mua thực tế của khách hàng...'."
+      ],
+      [
+        "Áp dụng chính sách quản trị danh mục sản phẩm minh bạch dựa trên sức mua thực tế của khách hàng và hiệu quả doanh số/m2, đảm bảo WinMart là điểm đến mua sắm đa dạng nhất.",
+        4,
+        "P",
+        "Customer-Centric Category Management (Quản trị danh mục lấy khách hàng làm trung tâm): Đảm bảo tính công bằng và tối ưu hóa lợi nhuận cho chuỗi bán lẻ. Sản phẩm nào bán chạy và đáp ứng đúng nhu cầu người tiêu dùng sẽ có vị trí ưu tiên, bất kể là của Masan hay đối thủ. => ĐÂY LÀ ĐÁP ÁN PHÙ HỢP NHẤT."
+      ],
+      [
+        "Mỗi tuần luân chuyển ngẫu nhiên vị trí trưng bày sản phẩm giữa các thương hiệu mà không cần dữ liệu doanh số.",
+        3,
+        "E",
+        "Arbitrary Decisions (Quyết định cảm tính): Việc xáo trộn ngẫu nhiên gây khó khăn cho vận hành xếp hàng của nhân viên và làm gián đoạn thói quen tìm kiếm sản phẩm của khách hàng.\n\n=> GỢI Ý: Mọi quyết định trưng bày phải dựa trên dữ liệu bán hàng. Hãy ưu tiên phương án 'Áp dụng chính sách quản trị danh mục sản phẩm minh bạch dựa trên sức mua thực tế...'."
+      ]
+    ]
+  },
+  {
+    "ph": "Giai đoạn 7: Đổi mới Mô hình Bán lẻ",
     "wk": "Năm 2021",
-    "k": "Sử dụng trực giác để kiểm chứng năng lực lãnh đạo thay vì chỉ dựa vào cam kết",
-    "ctx": "Sau khi liên minh 15 năm với Eximbank gặp bế tắc do xung đột cổ đông, SMBC cần tìm một đối tác ngân hàng mới tại Việt Nam. VPBank nổi lên là ứng viên hàng đầu với các chỉ số tài chính (ROE, NIM) ấn tượng.",
-    "q": "Rút kinh nghiệm từ thương vụ Eximbank, Hội đồng quản trị SMBC nên tiếp cận việc đầu tư vào VPBank như thế nào để đảm bảo rủi ro về con người được kiểm soát?",
+    "k": "Tận dụng thương vụ F&B (Phúc Long) để gia tăng biên lợi nhuận cho chuỗi bán lẻ",
+    "ctx": "Masan mua lại cổ phần chi phối tại chuỗi trà & cà phê Phúc Long. Thách thức đặt ra là làm thế nào để tích hợp Phúc Long vào chuỗi cửa hàng WinMart+ mà không phình to chi phí vận hành và mặt bằng.",
+    "q": "Là Trưởng ban Phát triển Dự án M&A, bạn đề xuất mô hình tích hợp nào cho Phúc Long tại các điểm bán WinMart+?",
     "o": [
       [
-        "Mua ngay 15% cổ phần chiến lược của VPBank vì các chỉ số tài chính hiện tại quá tốt để bỏ lỡ cơ hội.",
+        "Thuê mặt bằng lớn độc lập bên cạnh mỗi cửa hàng WinMart+ để mở cửa hàng Phúc Long quy mô đầy đủ.",
         2,
         "D",
-        "Authoritative (Độc đoán, vội vã): Quyết định vội vàng dựa thuần túy trên các chỉ số tài chính quá khứ mà phớt lờ trực giác đánh giá sự ổn định của bộ máy lãnh đạo. Đây là bài học đắt giá SMBC từng trả giá tại Eximbank.\n\n=> GỢI Ý: Hãy ưu tiên phương án 'Mua trước 49% cổ phần tại công ty con FE Credit...' để có cơ hội 'thử lửa' năng lực, sự minh bạch và mức độ tương thích văn hóa của đội ngũ lãnh đạo trước khi cam kết dòng vốn lớn."
+        "Cost Inefficiency (Phình to chi phí): Tốn kém chi phí thuê mặt bằng kép và chi phí đầu tư ban đầu (CapEx) rất lớn, triệt tiêu lợi thế tiết kiệm quy mô.\n\n=> GỢI Ý: Hãy tận dụng diện tích sẵn có của chuỗi bán lẻ. Ưu tiên chọn phương án 'Mở các Kiosk Phúc Long nhỏ gọn ngay bên trong cửa hàng WinMart+...' để tối ưu chi phí."
       ],
       [
-        "Tổ chức nhiều buổi tiệc giao lưu văn hóa giữa lãnh đạo hai bên để xây dựng tình cảm trước khi bàn chuyện đầu tư.",
+        "Mở các Kiosk Phúc Long nhỏ gọn ngay bên trong cửa hàng WinMart+, chia sẻ diện tích mặt bằng và lưu lượng khách hàng sẵn có.",
+        4,
+        "S",
+        "Synergistic Kiosk Model (Mô hình Kiosk cộng hưởng): Giải pháp tối ưu hóa chi phí thuê mặt bằng/m2, gia tăng biên lợi nhuận cho WinMart+ nhờ mảng F&B có biên lợi nhuận gộp cao, đồng thời giúp Phúc Long mở rộng điểm bán thần tốc với CapEx thấp. => ĐÂY LÀ ĐÁP ÁN PHÙ HỢP NHẤT."
+      ],
+      [
+        "Chỉ đóng gói trà/cà phê Phúc Long thành sản phẩm đóng chai/hộp bán trên kệ siêu thị, không bán đồ uống pha chế.",
         3,
         "E",
-        "Smoothing (Xoa dịu, cảm tính): Đề cao cảm xúc và xây dựng quan hệ ngoại giao nhưng thiếu đi bước kiểm chứng thực tế về năng lực vận hành chuyên môn.\n\n=> GỢI Ý: Hãy ưu tiên phương án 'Mua trước 49% cổ phần tại công ty con FE Credit...' để có một môi trường kiểm chứng bằng thực tế công việc thay vì chỉ giao lưu bề nổi."
+        "Opportunity Loss (Bỏ lỡ giá trị gia tăng): Không tận dụng được trải nghiệm thức uống tươi pha chế - vốn là yếu tố chính tạo nên thương hiệu Phúc Long và thu hút giới trẻ ghé thăm điểm bán.\n\n=> GỢI Ý: Cần mang trải nghiệm pha chế tươi vào điểm bán lẻ. Hãy chọn đáp án 'Mở các Kiosk Phúc Long nhỏ gọn ngay bên trong cửa hàng WinMart+...'."
       ],
       [
-        "Yêu cầu VPBank ký cam kết duy trì đội ngũ lãnh đạo hiện tại trong 10 năm bằng văn bản pháp lý chặt chẽ.",
+        "Yêu cầu nhân viên bán hàng WinMart+ đảm nhận luôn việc pha chế trà sữa Phúc Long để tiết kiệm nhân sự.",
         1,
-        "S",
-        "Rigid Structure (Cứng nhắc, rập khuôn): Dùng hệ thống hợp đồng để 'trói buộc' con người là không khả thi trong thực tế quản trị M&A. Sự cam kết hình thức không thể ngăn chặn chảy máu nhân tài.\n\n=> GỢI Ý: Hãy ưu tiên phương án 'Mua trước 49% cổ phần tại công ty con FE Credit...' vì sự gắn kết bền vững phải đến từ việc kiểm chứng năng lực và hợp tác thực tế, không phải bằng tờ giấy cam kết."
-      ],
-      [
-        "Mua trước 49% cổ phần tại công ty con FE Credit (2021) và ký hợp tác kinh doanh (2022) để 'thử lửa' năng lực và sự tương thích văn hóa trước khi đầu tư vào ngân hàng mẹ.",
-        4,
         "P",
-        "Participative & Testing (Trao quyền có kiểm chứng): Bước đi chiến lược thể hiện sự dung hòa giữa Lý trí và Trực giác. Việc hợp tác ở quy mô nhỏ giúp SMBC 'thử lửa' năng lực và mức độ tương thích văn hóa của đối tác trước khi cam kết lớn. => ĐÂY LÀ ĐÁP ÁN PHÙ HỢP NHẤT."
+        "Operation Overload (Gây quá tải vận hành): Ép nhân viên bán lẻ làm công việc pha chế chuyên môn sẽ làm giảm chất lượng đồ uống Phúc Long và làm chậm tốc độ thanh toán của siêu thị.\n\n=> GỢI Ý: Kiosk nên có nhân sự pha chế riêng nhưng tận dụng chung hạ tầng mặt bằng. Hãy chọn phương án 'Mở các Kiosk Phúc Long nhỏ gọn ngay bên trong cửa hàng WinMart+...'."
       ]
     ]
   },
   {
-    "ph": "Giai đoạn 2: Thẩm định giá",
-    "wk": "Tháng 3/2023",
-    "k": "Dung hòa mô hình định lượng và phán đoán giá trị cộng hưởng (Synergy)",
-    "ctx": "SMBC đang đàm phán mua 15% cổ phần VPBank. Mô hình định giá tài chính lý trí chỉ ra mức P/B hợp lý là 1,66 lần. Tuy nhiên, VPBank yêu cầu mức giá tương đương P/B gần 2,0 lần.",
-    "q": "Với vai trò Giám đốc Đầu tư của SMBC, bạn tư vấn cho Hội đồng Quản trị quyết định về mức giá này như thế nào?",
+    "ph": "Giai đoạn 8: Chuyển đổi Số & Bán hàng Đa kênh",
+    "wk": "Năm 2022 - 2023",
+    "k": "Phát triển chiến lược O2O (Offline-to-Online) ứng phó với xu hướng thương mại điện tử",
+    "ctx": "Thị trường bán lẻ chứng kiến sự bùng nổ của các ứng dụng đi chợ online. WinCommerce cần xây dựng kênh bán hàng trực tuyến nhưng phải tối ưu được chi phí giao hàng chặng cuối (last-mile delivery).",
+    "q": "Bạn đề xuất giải pháp O2O nào phù hợp nhất với lợi thế sẵn có của chuỗi hàng nghìn cửa hàng WinMart/WinMart+?",
     "o": [
       [
-        "Từ chối ngay lập tức, tuyệt đối tuân thủ mô hình tài chính 1,66 lần để bảo vệ kỷ luật đầu tư.",
+        "Xây dựng một kho siêu thương mại điện tử khổng lồ ở ngoại thành và giao hàng toàn bộ đơn hàng online từ kho này.",
         2,
         "S",
-        "Rigid System (Bảo thủ hệ thống): Áp dụng mô hình định giá lý trí một cách tĩnh tại. Việc bám chặt vào con số sổ sách làm bỏ lỡ các giá trị cộng hưởng (Synergy) vô hình.\n\n=> GỢI Ý: Hãy chọn 'Đồng ý trả P/B 2,0 lần' và giải trình phần chênh lệch (premium) bằng tiềm năng mở rộng hệ sinh thái và năng lực phối hợp đã được kiểm chứng qua quá trình hợp tác trước đó."
+        "Centralized Bottleneck (Nghẽn khoảng cách giao hàng): Giao thực phẩm tươi sống từ kho ngoại thành sẽ làm tăng chi phí giao hàng chặng cuối và kéo dài thời gian nhận hàng của khách.\n\n=> GỢI Ý: Hãy biến chính các cửa hàng WinMart+ phủ khắp phố phường thành điểm giao hàng. Chọn phương án 'Sử dụng các cửa hàng WinMart+ làm trung tâm phân phối nhỏ (Dark store/Micro-fulfillment)...'."
       ],
       [
-        "Đồng ý trả P/B 2,0 lần, giải trình phần chênh lệch (premium) bằng tiềm năng mở rộng hệ sinh thái và năng lực phối hợp đã được kiểm chứng qua giai đoạn hợp tác trước đó.",
+        "Sử dụng các cửa hàng WinMart+ gần nhất làm trung tâm phân phối nhỏ (Micro-fulfillment Center) để xử lý và giao đơn hàng online trong vòng 30-60 phút.",
         4,
-        "D",
-        "Strategic Agility (Nhạy bén chiến lược): Điểm giao thoa hoàn hảo giữa Lý trí (mức giá nền) và Trực giác (phán đoán giá trị hệ sinh thái). SMBC chấp nhận phần premium vì nhận diện được tiềm năng dài hạn mà bảng tính Excel chưa phản ánh hết. => ĐÂY LÀ ĐÁP ÁN PHÙ HỢP NHẤT."
-      ],
-      [
-        "Để VPBank tự quyết định giá bán, miễn là họ cam kết chia cổ tức cao hàng năm.",
-        1,
         "P",
-        "Laissez-faire (Buông thả, thiếu trách nhiệm): Phó mặc hoàn toàn việc định giá tài sản cho đối tác vi phạm nghiêm trọng nguyên tắc bảo vệ lợi ích cổ đông SMBC.\n\n=> GỢI Ý: Hãy chọn 'Đồng ý trả P/B 2,0 lần' với lý do giải trình cụ thể phần chênh lệch dựa trên tiềm năng mở rộng hệ sinh thái (Synergy) thay vì nhượng bộ vô điều kiện."
+        "O2O Store-as-a-Hub (Cửa hàng là trung tâm xử lý đơn): Tận dụng tối đa độ phủ mạng lưới Offline dày đặc để làm lợi thế cho Online. Giúp tối ưu hóa chi phí giao hàng chặng cuối, đảm bảo độ tươi ngon của thực phẩm và rút ngắn thời gian giao hàng. => ĐÂY LÀ ĐÁP ÁN PHÙ HỢP NHẤT."
       ],
       [
-        "Chấp nhận mua nhưng yêu cầu cắt giảm nhân sự của VPBank để bù đắp chi phí chênh lệch.",
-        3,
+        "Rút khỏi mảng bán hàng online, chỉ tập trung 100% vào bán hàng trực tiếp tại cửa hàng offline.",
+        1,
         "D",
-        "Forcing (Ép buộc, can thiệp thô bạo): Tư duy áp đặt nhằm tối ưu chi phí ngắn hạn sẽ gây hoang mang, triệt tiêu động lực và phá hủy lòng tin chiến lược.\n\n=> GỢI Ý: Hãy chọn 'Đồng ý trả P/B 2,0 lần' và chấp nhận trả phần premium này như một khoản phí đầu tư vào sự cộng hưởng chiến lược dài hạn, thay vì 'bóp nặn' nội bộ đối tác."
+        "Channel Blindness (Bỏ qua xu hướng mua sắm): Từ bỏ kênh online sẽ làm mất đi nhóm khách hàng trẻ đô thị có thói quen đi chợ qua ứng dụng vào tay các đối thủ cạnh tranh.\n\n=> GỢI Ý: Cần tích hợp đa kênh O2O. Hãy chọn đáp án 'Sử dụng các cửa hàng WinMart+ gần nhất làm trung tâm phân phối nhỏ...'"
+      ],
+      [
+        "Ủy quyền hoàn toàn mảng online cho một sàn thương mại điện tử bên thứ ba và chia sẻ 30% doanh thu.",
+        3,
+        "E",
+        "Margin Erosion (Mất biên lợi nhuận & Dữ liệu): Cắt chia hoa hồng quá cao cho sàn TMĐT làm bào mòn biên lợi nhuận mỏng của ngành bán lẻ, đồng thời đánh mất dữ liệu hành vi người dùng.\n\n=> GỢI Ý: Nên tự chủ kênh O2O trên nền tảng mạng lưới cửa hàng sẵn có. Bạn hãy chọn phương án 'Sử dụng các cửa hàng WinMart+ gần nhất làm trung tâm phân phối nhỏ...'."
       ]
     ]
   },
   {
-    "ph": "Giai đoạn 2: Thẩm định giá",
-    "wk": "Quyết định đánh đổi",
-    "k": "Ra quyết định đánh đổi chiến lược (CET1 vs ROI)",
-    "ctx": "Đầu tư 1,5 tỷ USD vào VPBank sẽ làm giảm tỷ lệ an toàn vốn (CET1) của SMBC Group tại Nhật Bản khoảng 19 điểm cơ bản, một mức giảm đáng kể.",
-    "q": "Hội đồng Quản trị SMBC lo ngại về việc suy giảm bộ đệm an toàn vốn. Bạn dùng luận điểm nào để bảo vệ thương vụ?",
+    "ph": "Giai đoạn 9: Mở rộng thị trường Nông thôn",
+    "wk": "Năm 2022 - 2023",
+    "k": "Thâm nhập thị trường ngách ở khu vực ngoài đô thị (Mô hình WinMart+ Rural)",
+    "ctx": "Thị trường đô thị dần bão hòa, Masan muốn đưa chuỗi bán lẻ hiện đại về khu vực nông thôn và bán đô thị. Tuy nhiên, mức thu nhập và thói quen tiêu dùng ở đây rất khác biệt so với thành phố lớn.",
+    "q": "Bạn điều chỉnh mô hình cửa hàng WinMart+ như thế nào khi mở rộng về khu vực nông thôn để đạt hiệu quả đầu tư?",
     "o": [
       [
-        "Dùng quyền biểu quyết ép thông qua vì chiến lược mở rộng châu Á quan trọng hơn chỉ số an toàn vốn trong nước.",
+        "Giữ nguyên 100% danh mục hàng hóa và mức giá của các cửa hàng tại Hà Nội/TP.HCM khi đưa về nông thôn.",
         2,
         "D",
-        "Authoritative (Áp đặt quyền lực): Lạm dụng quyền lãnh đạo để ép buộc, phớt lờ các cảnh báo lý trí về an toàn vốn dễ gây chia rẽ trong Hội đồng Quản trị.\n\n=> GỢI Ý: Để thuyết phục HĐQT, hãy chọn cách 'Trình bày bài toán đánh đổi: Chấp nhận giảm 19 điểm CET1 để đổi lấy mục tiêu 18 tỷ JPY lợi nhuận' nhằm lượng hóa trực giác thành số liệu cụ thể."
+        "Mismatched Value Proposition (Lệch pha giá trị): Mang các sản phẩm đắt tiền/nhập khẩu về nông thôn sẽ không phù hợp với túi tiền và nhu cầu người dân, khiến cửa hàng vắng khách.\n\n=> GỢI Ý: Cần bản địa hóa danh mục hàng hóa. Bạn nên ưu tiên chọn 'Điều chỉnh danh mục sản phẩm tập trung vào các mặt hàng nhu yếu phẩm giá bình ổn, nội địa hóa nguồn cung nông sản...'"
       ],
       [
-        "Trình bày bài toán đánh đổi: Chấp nhận giảm 19 điểm CET1 hiện tại để đổi lấy mục tiêu 18 tỷ JPY lợi nhuận sau 3 năm nhờ ROE vượt trội của VPBank.",
+        "Điều chỉnh danh mục sản phẩm tập trung vào các mặt hàng nhu yếu phẩm giá bình ổn, nội địa hóa nguồn cung nông sản địa phương và tối ưu chi phí mặt bằng.",
         4,
         "S",
-        "Systematic Trade-off (Đánh đổi hệ thống): Thể hiện sự khép lại mượt mà của vòng lặp phản hồi. Trực giác nhận diện vị thế chiến lược dài hạn được 'đóng gói' và lượng hóa thành chỉ số lợi nhuận 18 tỷ JPY/3 năm cụ thể để giải trình và thuyết phục HĐQT trên cơ sở lý trí. => ĐÂY LÀ ĐÁP ÁN PHÙ HỢP NHẤT."
+        "Localized Retail Model (Bản địa hóa mô hình bán lẻ): Chiến lược tiếp cận thấu cảm với thị trường nông thôn. Việc cung cấp đúng các sản phẩm nhu yếu phẩm thiết yếu với giá cả hợp lý giúp WinMart+ chiếm lĩnh thị phần bán lẻ hiện đại tại khu vực nông thôn. => ĐÂY LÀ ĐÁP ÁN PHÙ HỢP NHẤT."
       ],
       [
-        "Hứa hẹn sẽ bán tài sản khác để bù đắp lại chỉ số CET1 ngay trong năm nay cho đẹp sổ sách.",
-        3,
-        "E",
-        "Smoothing (Xoa dịu, đối phó): Dùng thủ thuật điều chỉnh tài sản ngắn hạn để làm đẹp chỉ số báo cáo không giải quyết được bản chất bài toán phân bổ nguồn lực.\n\n=> GỢI Ý: Sự minh bạch là then chốt. Hãy 'Trình bày bài toán đánh đổi: Chấp nhận giảm 19 điểm CET1 để đổi lấy mục tiêu 18 tỷ JPY lợi nhuận' nhằm cho HĐQT thấy rõ chi phí và kỳ vọng thu về."
-      ],
-      [
-        "Bỏ qua thương vụ này, tìm một ngân hàng nhỏ hơn để đầu tư nhằm không làm ảnh hưởng đến CET1.",
+        "Chỉ bán các sản phẩm riêng của Masan (Nước mắm Nam Ngư, Mì Omachi...) mà không bán các nhu yếu phẩm khác.",
         1,
         "P",
-        "Avoiding (Né tránh rủi ro): Sợ suy giảm chỉ số an toàn ngắn hạn nên từ bỏ cơ hội chiếm lĩnh vị thế dẫn đầu tại thị trường Việt Nam.\n\n=> GỢI Ý: Thay vì bỏ chạy, hãy 'Trình bày bài toán đánh đổi: Chấp nhận giảm 19 điểm CET1 để đổi lấy mục tiêu 18 tỷ JPY lợi nhuận' để chứng minh sự sụt giảm này là khoản đầu tư xứng đáng."
+        "Monopolistic Selection (Hạn chế sự lựa chọn): Cửa hàng bán lẻ phải là nơi đi chợ trọn gói (One-stop shop). Việc chỉ bán hàng Masan khiến người dân vẫn phải ra chợ truyền thống mua các nhu yếu phẩm khác.\n\n=> GỢI Ý: Hãy đa dạng hóa danh mục hàng hóa hợp túi tiền bằng cách chọn 'Điều chỉnh danh mục sản phẩm tập trung vào các mặt hàng nhu yếu phẩm giá bình ổn...'."
+      ],
+      [
+        "Xây dựng các đại siêu thị WinMart cực lớn ở từng xã để thu hút người dân tới tham quan.",
+        3,
+        "E",
+        "CapEx Waste (Lãng phí vốn đầu tư): Mật độ dân số và sức mua nông thôn không đủ để gánh chi phí vận hành khổng lồ của một đại siêu thị.\n\n=> GỢI Ý: Mô hình cửa hàng tiện lợi nhỏ gọn linh hoạt sẽ phù hợp hơn. Hãy chọn đáp án 'Điều chỉnh danh mục sản phẩm tập trung vào các mặt hàng nhu yếu phẩm giá bình ổn...'"
       ]
     ]
   },
   {
-    "ph": "Hậu sáp nhập: Vận hành",
-    "wk": "Năm 2025",
-    "k": "Xử lý xung đột văn hóa vận hành (Tốc độ vs Kiểm soát)",
-    "ctx": "Tại Trung tâm FDI, chuyên viên VPBank phàn nàn rằng quy trình kiểm duyệt tín dụng đa tầng của chuyên gia SMBC quá chậm, khiến ngân hàng mất khách vào tay đối thủ. Chuyên gia SMBC thì tố VPBank đang chạy theo KPI mà coi nhẹ rủi ro.",
-    "q": "Là Trưởng ban Tích hợp (IMO Lead), bạn xử lý sự lệch pha văn hóa này như thế nào?",
+    "ph": "Giai đoạn 10: Tối ưu hóa Cấu trúc Tài chính",
+    "wk": "Năm 2023 - 2024",
+    "k": "Huy động vốn đầu tư tư nhân quốc tế (Private Equity) để giảm áp lực nợ vay",
+    "ctx": "Để tài trợ cho quá trình mở rộng hệ sinh thái tiêu dùng và giảm tỷ lệ nợ/vốn chủ sở hữu, Masan cần huy động nguồn vốn dài hạn từ các quỹ đầu tư uy tín toàn cầu (như Bain Capital, KKR).",
+    "q": "Với vai trò Giám đốc Tài chính (CFO) Tập đoàn, bạn sử dụng luận điểm chiến lược nào để thuyết phục các quỹ PE quốc tế rót hàng trăm triệu USD vào The CrownX/WinCommerce?",
     "o": [
       [
-        "Yêu cầu VPBank tuân thủ 100% quy trình phê duyệt rủi ro của Nhật Bản để đảm bảo an toàn tuyệt đối.",
+        "Cam kết sẽ trả lãi suất cố định 15%/năm cho khoản đầu tư bất chấp kết quả kinh doanh.",
         2,
         "S",
-        "Rigid Control (Kiểm soát cứng nhắc): Rơi vào rào cản khái niệm khi áp đặt nguyên trạng quy trình kiểm soát của thị trường bão hòa vào thị trường mới nổi, triệt tiêu lợi thế cạnh tranh về tốc độ.\n\n=> GỢI Ý: Hãy ưu tiên 'Xây dựng cơ chế SLA phân tầng: Hồ sơ rủi ro thấp tự quyết, hồ sơ rủi ro cao mới qua kiểm duyệt' để dung hòa nhu cầu tốc độ và sự an toàn."
+        "Debt-like Trap (Bẫy chi phí vốn cao): Biến vốn cổ phần thành nghĩa vụ nợ tài chính nặng nề sẽ làm tăng rủi ro thanh khoản cho tập đoàn khi thị trường biến động.\n\n=> GỢI Ý: Các quỹ PE tìm kiếm câu chuyện tăng trưởng và giá trị hệ sinh thái chứ không chỉ là lãi suất vay. Bạn nên chọn 'Chứng minh câu chuyện tăng trưởng bền vững của nền tảng Bán lẻ - Tiêu dùng duy nhất tại Việt Nam đạt EBITDA dương...'."
       ],
       [
-        "Phân quyền cho VPBank tự quyết mọi khoản vay, SMBC chỉ nhận báo cáo tài chính hàng quý.",
-        1,
-        "P",
-        "Laissez-faire (Buông lỏng quản trị): Từ bỏ hoàn toàn vai trò giám sát rủi ro của cổ đông chiến lược, khiến ngân hàng đối mặt với nợ xấu.\n\n=> GỢI Ý: Hãy ưu tiên 'Xây dựng cơ chế SLA phân tầng: Hồ sơ rủi ro thấp tự quyết, hồ sơ rủi ro cao mới qua kiểm duyệt' để trao quyền nhưng vẫn giữ được bộ khung rủi ro."
-      ],
-      [
-        "Xây dựng cơ chế SLA phân tầng: Hồ sơ rủi ro thấp do VPBank tự quyết (có hậu kiểm), hồ sơ rủi ro cao/quy mô lớn mới qua kiểm duyệt đa tầng của SMBC.",
-        4,
-        "E",
-        "Empathetic & Structured (Thấu cảm & Dung hòa cấu trúc): Thiết lập 'Cẩm nang vận hành lai'. Giải pháp này dung hòa xuất sắc giữa văn hóa tấn công nhanh của VPBank và khẩu vị rủi ro thận trọng của SMBC. => ĐÂY LÀ ĐÁP ÁN PHÙ HỢP NHẤT."
-      ],
-      [
-        "Thay thế toàn bộ Giám đốc khối FDI người Việt bằng người Nhật để đồng nhất quy trình.",
-        3,
-        "D",
-        "Dominance (Thâu tóm quyền lực): Tư duy thôn tính áp đặt, gây xung đột văn hóa gay gắt và triệt tiêu sự am hiểu thị trường bản địa.\n\n=> GỢI Ý: Không nên phá vỡ văn hóa bản địa. Hãy chọn 'Xây dựng cơ chế SLA phân tầng' để tận dụng ưu điểm của chuyên gia Việt Nam (tốc độ) và chuyên gia Nhật Bản (kiểm soát rủi ro)."
-      ]
-    ]
-  },
-  {
-    "ph": "Hậu sáp nhập: Rủi ro",
-    "wk": "Năm 2025-2026",
-    "k": "Bản địa hóa tiêu chuẩn quản trị rủi ro",
-    "ctx": "Áp dụng khung quản trị rủi ro thuần Nhật Bản vào thị trường Việt Nam khiến nhiều doanh nghiệp FDI vừa và nhỏ bị đánh rớt hồ sơ do không đáp ứng một số tiêu chí về tài sản đảm bảo, dù họ có dòng tiền rất tốt.",
-    "q": "Đứng trước thực trạng mô hình quản trị rủi ro 'bắt bệnh sai' do khác biệt môi trường vĩ mô, bạn sẽ đề xuất giải pháp nào?",
-    "o": [
-      [
-        "Thiết lập cơ chế phản hồi hai chiều (Feedback Loop), từ đó xây dựng bộ tiêu chí 'lai': kết hợp chuẩn mực Basel của SMBC với kinh nghiệm đánh giá dòng tiền thực tế của VPBank.",
-        4,
-        "S",
-        "System Innovation (Đổi mới hệ thống): Biết phá bỏ sự cam kết rập khuôn để bản địa hóa tiêu chuẩn quản trị. Việc lắng nghe phản hồi từ tuyến đầu giúp xây dựng bộ tiêu chí phù hợp với thực tiễn thị trường Việt Nam mà vẫn giữ vững khung an toàn Basel. => ĐÂY LÀ ĐÁP ÁN PHÙ HỢP NHẤT."
-      ],
-      [
-        "Bảo vệ mô hình của Nhật Bản đến cùng vì đó là chuẩn mực quốc tế đã được chứng minh.",
-        2,
-        "D",
-        "Rigid Adherence (Kiên định thái quá): Thái độ bảo thủ cố chấp biến công cụ quản trị rủi ro thành rào cản ngăn cản sự phát triển.\n\n=> GỢI Ý: Chuẩn mực cần linh hoạt theo vĩ mô. Hãy chọn 'Thiết lập cơ chế phản hồi hai chiều để xây dựng bộ tiêu chí lai' nhằm bản địa hóa khẩu vị rủi ro cho phù hợp với doanh nghiệp Việt."
-      ],
-      [
-        "Tạm ngưng phê duyệt khách hàng mới cho đến khi hai bên tranh luận xong bộ tiêu chuẩn.",
-        1,
-        "P",
-        "Avoiding (Trì hoãn, né tránh): Làm gián đoạn dòng chảy kinh doanh và ảnh hưởng trực tiếp đến doanh thu.\n\n=> GỢI Ý: Cần vừa làm vừa điều chỉnh. Hãy chọn 'Thiết lập cơ chế phản hồi hai chiều để xây dựng bộ tiêu chí lai' để liên tục nắn chỉnh chính sách trên cơ sở thực tiễn hoạt động."
-      ],
-      [
-        "Lách luật bằng cách chuyển các khoản vay này sang công ty con FE Credit để dễ duyệt hơn.",
-        3,
-        "E",
-        "Rule Bending (Thỏa hiệp sai lệch): Lựa chọn giải pháp lách quy trình hời hợt, làm tăng rủi ro nợ xấu tập trung.\n\n=> GỢI Ý: Đừng tạo ra rủi ro hệ thống ngầm. Hãy đối diện bằng cách 'Thiết lập cơ chế phản hồi hai chiều để xây dựng bộ tiêu chí lai', qua đó chính thức hóa các tiêu chuẩn cấp tín dụng mới một cách an toàn."
-      ]
-    ]
-  },
-  {
-    "ph": "Hậu sáp nhập: Chiến lược",
-    "wk": "Năm 2025-2026",
-    "k": "Giải quyết mâu thuẫn đa mục tiêu (Tăng trưởng vs An toàn)",
-    "ctx": "Tỷ lệ an toàn vốn (CAR) của VPBank giảm từ 19% xuống gần 15% do tốc độ tăng trưởng tín dụng quá cao (30-35%/năm). Hội đồng rủi ro cảnh báo về sự suy giảm 'bộ đệm an toàn'.",
-    "q": "Bạn nhận định như thế nào về sự suy giảm chỉ số CAR này và cần có hành động gì?",
-    "o": [
-      [
-        "Lập tức yêu cầu VPBank ngừng cấp tín dụng để đưa CAR về lại mức 19% như lúc mới nhận vốn.",
-        2,
-        "D",
-        "Micromanagement (Phản ứng tĩnh tại, vi mô): Việc ép phanh đột ngột sẽ bóp nghẹt đà tăng trưởng, phá hỏng kế hoạch kinh doanh.\n\n=> GỢI Ý: Sự suy giảm này là một phần của quy luật tăng trưởng. Hãy 'Chấp nhận đây là hệ quả tất yếu và chuyển đổi sang mô hình Basel III nâng cao (IRB)' để quản trị rủi ro bằng công nghệ thay vì cấm đoán tín dụng."
-      ],
-      [
-        "Chấp nhận đây là hệ quả tất yếu của chiến lược kép. Chủ động theo dõi động thái này và yêu cầu VPBank chuyển đổi sang mô hình Basel III nâng cao (IRB) để tối ưu hóa trọng số rủi ro.",
-        4,
-        "S",
-        "Strategic Foresight (Tầm nhìn chiến lược động): Nhận thức rõ CAR suy giảm là hệ quả tất yếu khi tài sản rủi ro tăng nhanh hơn vốn tự có. SMBC đóng góp giá trị cộng hưởng bằng cách hỗ trợ triển khai mô hình IRB để tối ưu hóa trọng số rủi ro. => ĐÂY LÀ ĐÁP ÁN PHÙ HỢP NHẤT."
-      ],
-      [
-        "Bỏ qua cảnh báo vì 15% vẫn cao hơn mức quy định tối thiểu (8%) của Ngân hàng Nhà nước.",
-        1,
-        "P",
-        "Total hands-off (Chủ quan, buông thả): Phớt lờ xu hướng suy giảm chỉ số an toàn vốn trong môi trường vĩ mô đầy biến động là thiếu trách nhiệm.\n\n=> GỢI Ý: Phải có biện pháp quản trị dài hạn. Hãy 'Chấp nhận đây là hệ quả tất yếu và chuyển đổi sang mô hình Basel III nâng cao (IRB)' để xây dựng lớp phòng thủ rủi ro hiện đại hơn."
-      ],
-      [
-        "Tổ chức hội thảo nội bộ để trấn an nhân viên rủi ro mà không thay đổi bất kỳ chính sách nào.",
-        3,
-        "E",
-        "Smoothing (Hình thức, xoa dịu): Tập trung giải quyết cảm xúc lo âu ngắn hạn thay vì đưa ra giải pháp cấu trúc.\n\n=> GỢI Ý: Hội thảo không giải quyết được vấn đề an toàn vốn. Hãy 'Chấp nhận đây là hệ quả tất yếu và chuyển đổi sang mô hình Basel III nâng cao (IRB)' để tạo ra sự nâng cấp thực chất về vận hành."
-      ]
-    ]
-  },
-  {
-    "ph": "Hậu sáp nhập: Tích hợp",
-    "wk": "Năm 2026",
-    "k": "Khai thác giá trị cộng hưởng (Synergy Realization)",
-    "ctx": "Công ty Chứng khoán VPBankS có kế hoạch huy động nguồn vốn quốc tế lớn để mở rộng mảng Margin, nhưng uy tín trên thị trường vốn quốc tế chưa đủ mạnh.",
-    "q": "Với vai trò đối tác chiến lược (sở hữu 15%), SMBC nên tham gia hỗ trợ như thế nào để tạo ra giá trị cộng hưởng?",
-    "o": [
-      [
-        "Đứng ra thu xếp các khoản vay hợp vốn quốc tế (Syndicated Loans) nhờ mạng lưới quan hệ định chế tài chính toàn cầu của SMBC.",
+        "Chứng minh câu chuyện tăng trưởng bền vững của nền tảng Bán lẻ - Tiêu dùng duy nhất tại Việt Nam đạt EBITDA dương, tích hợp dữ liệu người dùng và khả năng nhân rộng mô hình 'Point of Life'.",
         4,
         "P",
-        "Synergy Execution (Thực thi cộng hưởng xuất sắc): Minh chứng thực tế cho thấy nhà đầu tư chiến lược thiểu số vẫn tạo ra giá trị to lớn bằng cách dùng uy tín toàn cầu để bảo chứng cho công ty con của đối tác thu xếp vốn rẻ. => ĐÂY LÀ ĐÁP ÁN PHÙ HỢP NHẤT."
+        "Equity Value Narrative (Thuyết phục bằng giá trị tăng trưởng): Luận điểm đầu tư định lượng kết hợp tầm nhìn chiến lược dài hạn. Các quỹ PE bị thuyết phục bởi năng lực vận hành đã được chứng minh (EBITDA dương) và dư địa tăng trưởng khổng lồ của thị trường bán lẻ hiện đại Việt Nam. => ĐÂY LÀ ĐÁP ÁN PHÙ HỢP NHẤT."
       ],
       [
-        "Yêu cầu VPBankS tự thân vận động để rèn luyện năng lực độc lập.",
+        "Hứa hẹn sẽ niêm yết WinCommerce lên sàn chứng khoán Mỹ (NYSE) trong vòng 6 tháng tới.",
         1,
         "D",
-        "Withholding Support (Sự thờ ơ chiến lược): Tư duy cục bộ bỏ mặc đối tác làm thất thoát cơ hội hiện thực hóa giá trị cộng hưởng.\n\n=> GỢI Ý: Đây là lúc đối tác chiến lược thể hiện vai trò. Cần chọn phương án 'Đứng ra thu xếp các khoản vay hợp vốn quốc tế' để sử dụng đòn bẩy uy tín từ tập đoàn mẹ."
+        "Unrealistic Promise (Hứa hẹn thiếu khả thi): Đưa ra mốc thời gian IPO phi thực tế tại thị trường nước ngoài khắt khe sẽ làm mất niềm tin của các nhà đầu tư chuyên nghiệp trong quá trình thẩm định (Due Diligence).\n\n=> GỢI Ý: Hãy thuyết phục nhà đầu tư bằng chỉ số vận hành thực tế. Hãy chọn phương án 'Chứng minh câu chuyện tăng trưởng bền vững của nền tảng Bán lẻ - Tiêu dùng...'"
       ],
       [
-        "Trực tiếp cho VPBankS vay tiền từ nguồn vốn nội bộ của SMBC Việt Nam với lãi suất ưu đãi.",
+        "Đề nghị bán đứt quyền kiểm soát WinCommerce cho quỹ đầu tư và Masan chỉ làm cổ đông nhỏ lẻ.",
         3,
         "E",
-        "Subsidizing (Trợ cấp ngắn hạn): Mang tính bao cấp làm tiêu tốn hạn mức tín dụng nội bộ, không giúp công ty con xây dựng năng lực trên thị trường quốc tế.\n\n=> GỢI Ý: Đừng giới hạn ở nguồn vốn nội bộ. Hãy 'Đứng ra thu xếp các khoản vay hợp vốn quốc tế' để dẫn dắt đối tác tiếp cận dòng vốn quốc tế khổng lồ bên ngoài."
-      ],
-      [
-        "Mua đứt 100% VPBankS để dễ dàng bơm vốn và kiểm soát hoàn toàn.",
-        2,
-        "S",
-        "Empire Building (Xây dựng đế chế tốn kém): Hành động vội vã thâu tóm gây phình to cấu trúc quản trị và tiêu tốn nguồn vốn không cần thiết.\n\n=> GỢI Ý: Không cần phải mua đứt 100% mới tạo ra giá trị. Hãy dùng uy tín hiện có bằng cách 'Đứng ra thu xếp các khoản vay hợp vốn quốc tế' để mang lại nguồn vốn ngoại tệ lớn mà tốn ít chi phí nhất."
-      ]
-    ]
-  },
-  {
-    "ph": "Đánh giá định kỳ",
-    "wk": "Chu kỳ 12-18 tháng",
-    "k": "Chống lại 'Quán tính tổ chức' và Thiên kiến xác nhận",
-    "ctx": "Mô hình vận hành giữa SMBC và VPBank đã chạy được 1.5 năm. Một số lãnh đạo cấp trung cảm thấy các quy định phối hợp cũ đang trở nên rườm rà, nhưng không ai dám lên tiếng vì sợ 'mất lòng' đối tác.",
-    "q": "Làm thế nào để gỡ bỏ sức ỳ (quán tính tổ chức) này trong bộ máy tích hợp?",
-    "o": [
-      [
-        "Ban hành chỉ thị cấm phàn nàn về quy trình hợp tác, yêu cầu mọi người tập trung bán hàng.",
-        2,
-        "D",
-        "Forcing (Trèn ép, áp đặt): Dập tắt sự phản biện, tạo môi trường sợ hãi và che đậy những điểm nghẽn vận hành đang âm thầm tích tụ.\n\n=> GỢI Ý: Văn hóa im lặng sẽ giết chết tích hợp. Bạn nên 'Thiết lập vai trò Phản biện độc lập (Devil's Advocate)' để thể chế hóa sự phản biện một cách chuyên nghiệp."
-      ],
-      [
-        "Lập hòm thư góp ý ẩn danh và gửi báo cáo hàng tháng cho CEO đọc.",
-        3,
-        "E",
-        "Passive Listening (Lắng nghe thụ động): Cách làm mang tính hình thức, không tạo ra cơ chế đối thoại trực tiếp và thiếu chế tài bắt buộc cấp quản lý phải điều chỉnh chính sách.\n\n=> GỢI Ý: Sự góp ý thụ động là chưa đủ. Bạn cần 'Thiết lập vai trò Phản biện độc lập (Devil's Advocate)' tại ủy ban hỗn hợp để trực tiếp chất vấn các quy trình đã lỗi thời."
-      ],
-      [
-        "Bỏ qua mọi ý kiến cấp trung vì mô hình ban đầu do C-Suite hai bên lập ra là bất khả xâm phạm.",
-        1,
-        "S",
-        "Confirmation Bias (Thiên kiến xác nhận): Rơi vào bẫy 'quán tính tổ chức', phớt lờ những xung đột ở tầng vận hành thực tế.\n\n=> GỢI Ý: Không có mô hình nào tĩnh tại mãi mãi. Hãy 'Thiết lập vai trò Phản biện độc lập (Devil's Advocate)' để liên tục rà soát, phá vỡ sức ỳ và tối ưu hóa hệ thống."
-      ],
-      [
-        "Thiết lập vai trò 'Phản biện độc lập' (Devil's Advocate) trong ủy ban hỗn hợp để chính thức hóa việc rà soát, chất vấn và thay đổi các quy trình không còn phù hợp.",
-        4,
-        "P",
-        "Constructive Conflict (Xung đột kiến tạo): Thể chế hóa quyền phản biện để hóa giải rào cản tâm lý sợ mất lòng. Đây là công cụ hữu hiệu giúp loại bỏ các thủ tục rập khuôn và cập nhật 'Cẩm nang vận hành lai'. => ĐÂY LÀ ĐÁP ÁN PHÙ HỢP NHẤT."
-      ]
-    ]
-  },
-  {
-    "ph": "Giai đoạn 3: Phê duyệt pháp lý",
-    "wk": "Quá trình hoàn tất giao dịch",
-    "k": "Quản trị giới hạn pháp lý và chiến lược sở hữu",
-    "ctx": "SMBC muốn tham gia sâu vào thị trường ngân hàng Việt Nam. Luật pháp quy định tỷ lệ sở hữu tối đa của nhà đầu tư chiến lược nước ngoài tại một ngân hàng trong nước là 15%.",
-    "q": "Tại sao mức 15% là sự lựa chọn mang tính 'lý trí' hoàn hảo cho SMBC trong thương vụ này?",
-    "o": [
-      [
-        "Bởi vì nó đạt mức trần sở hữu pháp lý, vừa đủ trở thành cổ đông chiến lược để thúc đẩy quyền lợi, vừa không tốn quá nhiều vốn để phải hợp nhất báo cáo tài chính.",
-        4,
-        "S",
-        "Rational Optimization (Tối ưu hóa lý trí): Sự tính toán cân bằng hoàn hảo giữa quy mô đầu tư, quyền lợi chiến lược và rào cản pháp lý. Mức 15% giúp SMBC có tiếng nói quan trọng nhưng không phải gánh chịu chi phí hợp nhất báo cáo. => ĐÂY LÀ ĐÁP ÁN PHÙ HỢP NHẤT."
-      ],
-      [
-        "Vì SMBC không đủ tiền để mua tỷ lệ cao hơn tại thời điểm đó.",
-        1,
-        "D",
-        "Misinterpretation (Đánh giá sai năng lực): Phản ánh sự thiếu hiểu biết về tiềm lực tài chính của tập đoàn SMBC với ngân sách đầu tư M&A hàng tỷ USD.\n\n=> GỢI Ý: Hãy chọn đáp án 'Bởi vì nó đạt mức trần sở hữu pháp lý...' vì thực tế mức 15% là sự lựa chọn tối ưu hóa giới hạn quy định chứ không phải do thiếu vốn."
-      ],
-      [
-        "Vì VPBank ép SMBC chỉ được mua 15% để giữ quyền lực cho ban lãnh đạo cũ.",
-        2,
-        "E",
-        "Victim Mentality (Tư duy suy diễn cảm tính): Bỏ qua yếu tố pháp lý vĩ mô (quy định room ngoại của Ngân hàng Nhà nước) để suy diễn thành sự tranh chấp quyền lực cá nhân.\n\n=> GỢI Ý: Hãy chọn đáp án 'Bởi vì nó đạt mức trần sở hữu pháp lý...' vì lựa chọn này tuân thủ đúng quy định vĩ mô, đem lại quyền lợi chiến lược tối đa mà không tốn kém vô ích."
-      ],
-      [
-        "Vì con số 15% mang ý nghĩa may mắn trong văn hóa kinh doanh của Nhật Bản.",
-        3,
-        "P",
-        "Superstition (Mê tín cảm tính): Phủ nhận hoàn toàn các phân tích tài chính và khung pháp lý nghiêm ngặt đối với một quyết định M&A hàng tỷ USD.\n\n=> GỢI Ý: Các thương vụ tài chính định lượng không dựa trên tâm linh. Hãy chọn 'Bởi vì nó đạt mức trần sở hữu pháp lý...' do tính tối ưu hóa lợi ích và nghĩa vụ một cách khoa học."
-      ]
-    ]
-  },
-  {
-    "ph": "Đúc kết chặng đường",
-    "wk": "Tương lai",
-    "k": "Tầm nhìn về vai trò của Lý trí và Trực giác trong M&A",
-    "ctx": "Thương vụ SMBC - VPBank đi vào giai đoạn ổn định. Nhìn lại toàn bộ hành trình, bạn rút ra bài học cốt lõi nhất về Kỹ năng Lãnh đạo trong M&A xuyên biên giới.",
-    "q": "Triết lý nào dưới đây phản ánh đúng nhất sự giao thoa giữa Lý trí và Trực giác quản trị trong thành công của thương vụ này?",
-    "o": [
-      [
-        "Chỉ cần chỉ số tài chính đẹp và mô hình định lượng hoàn hảo, mọi khác biệt văn hóa đều có thể dùng tiền giải quyết.",
-        2,
-        "S",
-        "Over-reliance on Logic (Lệch pha lý trí): Bảng tính Excel hoàn hảo đến đâu cũng sẽ thất bại nếu vấp phải sự lệch pha về văn hóa và rào cản vận hành.\n\n=> GỢI Ý: Đáp án cốt lõi của nghiên cứu là sự song hành: 'Lý trí cung cấp nền tảng định lượng để kiểm soát rủi ro, Trực giác đánh giá văn hóa/con người... Hai yếu tố tạo thành vòng lặp phản hồi'."
-      ],
-      [
-        "Linh cảm của người lãnh đạo là thứ duy nhất quyết định. Mọi dữ liệu chỉ dùng để hợp thức hóa hồ sơ.",
-        1,
-        "D",
-        "Intuition Bias (Thiên kiến trực giác cực đoan): Lạm dụng cảm tính cá nhân, phủ nhận quản trị rủi ro dễ dẫn đến các thương vụ thâu tóm sai lầm và lãng phí tài sản.\n\n=> GỢI Ý: Trực giác không thể đứng một mình. Phải chọn 'Lý trí cung cấp nền tảng định lượng để kiểm soát rủi ro, Trực giác đánh giá văn hóa/con người... Hai yếu tố tạo thành vòng lặp phản hồi'."
-      ],
-      [
-        "Phải chọn đối tác có văn hóa giống hệt mình 100% thì mới sáp nhập, nếu khác biệt dù nhỏ cũng hủy kèo.",
-        3,
-        "E",
-        "Risk Aversion (Sợ rủi ro cực đoan): Yêu cầu sự đồng nhất tuyệt đối về văn hóa sẽ làm triệt tiêu các cơ hội M&A xuyên biên giới.\n\n=> GỢI Ý: Khác biệt văn hóa tạo ra giá trị cộng hưởng nếu biết dung hòa. Hãy chọn 'Lý trí cung cấp nền tảng định lượng để kiểm soát rủi ro, Trực giác đánh giá văn hóa/con người... Hai yếu tố tạo thành vòng lặp phản hồi'."
-      ],
-      [
-        "Lý trí cung cấp nền tảng định lượng để kiểm soát rủi ro, Trực giác đánh giá văn hóa/con người để xác định tiềm năng. Hai yếu tố phải tạo thành một 'vòng lặp phản hồi' liên tục đối chiếu nhau.",
-        4,
-        "P",
-        "Dual Process Theory (Mô hình Tiến trình kép): Đây là đúc kết cốt lõi của toàn bộ nghiên cứu. Lý trí giúp lượng hóa an toàn, Trực giác giúp nhận diện văn hóa; hai hệ thống liên tục kiểm chứng và hiệu chỉnh lẫn nhau. => ĐÂY LÀ ĐÁP ÁN PHÙ HỢP NHẤT."
+        "Strategic Abandonment (Mất định hướng cốt lõi): Từ bỏ quyền kiểm soát mảng bán lẻ sẽ làm sụp đổ toàn bộ chiến lược tích hợp dọc FMCG - Bán lẻ - Tài chính mà Masan đã kiên trì xây dựng.\n\n=> GỢI Ý: Quỹ PE đầu tư vào năng lực quản trị của Masan chứ không muốn tự vận hành bán lẻ. Bạn nên chọn phương án 'Chứng minh câu chuyện tăng trưởng bền vững của nền tảng Bán lẻ - Tiêu dùng...'"
       ]
     ]
   }
